@@ -4,7 +4,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --background-gray: #f9f9f9;
+  --foreground: #0f102a;
+  --white: #ffffff;
+  --blue: #434f90;
+  --red: #e26f6f;
+  --navy-100: #b5bac5;
+  --gray-100: #efefef;
+  --gray-200: #cbcedb;
+  --gray-300: #bec1c9;
+  --gray-500: #6f7282;
+  --gray-700: #94949d;
 }
 
 @media (prefers-color-scheme: dark) {
