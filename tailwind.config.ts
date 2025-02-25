@@ -23,13 +23,17 @@ export default {
         "gray-700": "var(--gray-700)",
       },
       screens: {
-        container: "940px",
+        "mb-md": "375px",
+        "mb-lg": "414px",
+        pc: "940px",
       },
       maxWidth: {
         "900": "900px",
       },
       fontSize: {
         xs: "10px",
+        sm: "12px",
+        base: "14px",
         "10xl-vw": "18.6vw",
         "10xl-fix": "198px",
       },
