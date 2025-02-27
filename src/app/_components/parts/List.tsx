@@ -1,8 +1,13 @@
 import { ListItem } from "@/app/_components/widgets";
 
-export function List() {
+type Props = {
+  keyword: string;
+};
+
+export function List({ keyword }: Props) {
+  console.log(keyword);
   return (
-    <ul className="divide-y divide-gray-100 border border-gray-100 rounded-br-md rounded-bl-md bg-white relative">
+    <ul className="divide-y divide-gray-100 border border-gray-100 rounded-b-md bg-white relative">
       <ListItem />
     </ul>
   );

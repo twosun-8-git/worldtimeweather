@@ -1,7 +1,13 @@
 import React from "react";
 
+import { cn } from "@/app/utils";
+
 type InputTextProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 export function InputText(props: InputTextProps) {
-  return <input type="text" {...props} />;
+  const { className, ...rest } = props;
+
+  const baseStyle = "w-full border border-gray-100 p-2";
+
+  return <input type="text" className={cn(baseStyle, className)} {...rest} />;
 }
