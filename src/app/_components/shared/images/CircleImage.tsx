@@ -14,7 +14,7 @@ export function CircleImage({ className, src, alt }: Props) {
 
   return (
     <div className={cn(baseStyle, className)}>
-      <Image src={src} alt={alt} layout="fill" objectFit="cover" />
+      <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} />
     </div>
   );
 }

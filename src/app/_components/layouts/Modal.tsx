@@ -6,20 +6,22 @@ import { SubmitButton } from "../shared";
 export function Modal() {
   return (
     <dialog
-      className="fixed top-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 "
+      className="fixed top-0 flex items-center justify-center w-full h-full bg-black bg-opacity-80"
       open
     >
       <div className="bg-white flex flex-col w-[92%] max-w-[900px] rounded-lg overflow-hidden md:flex-row">
-        <div className="flex flex-col gap-y-2 p-4 md:gap-y-10">
+        <div className="flex flex-col gap-y-2 p-4 md:gap-y-10 md:p-6">
           <dl>
-            <dt className="text-sm font-bold sm:text-base">Introduction</dt>
+            <dt className="text-sm font-bold sm:text-base md:mb-1">
+              Introduction
+            </dt>
             <dd className="text-xs sm:text-sm">
               You can check the <b>time, date, weather, and temperature</b> for
               any country in the world.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-bold sm:text-base">Feature</dt>
+            <dt className="text-sm font-bold sm:text-base md:mb-1">Feature</dt>
             <dd className="text-xs sm:text-sm">
               Search for a country and tap <b>“Save”</b> to store it in your
               browser for quick access next time.
@@ -30,13 +32,15 @@ export function Modal() {
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-bold sm:text-base">Support</dt>
+            <dt className="text-sm font-bold sm:text-base md:mb-1">Support</dt>
             <dd className="text-xs sm:text-sm">
-              For feedback or inquiries, please use the form on the right.
+              For feedback or inquiries, please use the form on the
+              <span className="md:hidden"> bottom</span>
+              <span className="hidden md:inline"> right</span>.
             </dd>
           </dl>
         </div>
-        <div className="p-4 bg-background-gray md:w-[356px] md:shrink-0">
+        <div className="p-4 bg-background-gray md:w-[356px] md:shrink-0 md:p-6">
           <form className="flex flex-col gap-y-2 md:gap-y-4">
             <Label id="name" label="Name">
               <InputText />
@@ -47,7 +51,7 @@ export function Modal() {
             <Label id="message" label="Message">
               <TextArea />
             </Label>
-            <div className="flex justify-center">
+            <div className="flex justify-center md:mt-4">
               <SubmitButton />
             </div>
           </form>
