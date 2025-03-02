@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function Main({ children }: Props) {
-  return <main>{children}</main>;
+  return <main className="w-full">{children}</main>;
 }

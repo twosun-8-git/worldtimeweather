@@ -7,7 +7,7 @@ export {
   WeatherIcon,
 } from "./icons";
 export { CloseButton, RemoveButton, SaveButton, SubmitButton } from "./buttons";
-export { CircleImage } from "./CircleImage";
-export { InputText } from "./forms";
-export { LogoType } from "./LogoType";
-export { Time } from "./Time";
+export { CircleImage } from "./images";
+export { InputText, Label, TextArea } from "./forms";
+export { LogoType } from "./logos";
+export { LargeTimer, MediumTimer } from "./times";

@@ -5,18 +5,18 @@ export function ListItem() {
   return (
     <>
       <li className="py-2 px-2 md:flex md:items-center md:w-full">
-        <div className="flex items-start gap-x-1 mb-md:items-center md:w-[308px] md:whitespace-nowrap pc:w-[320px] pc:gap-x-1.5">
+        <figure className="flex items-start gap-x-1 mb-md:items-center md:w-[308px] md:whitespace-nowrap pc:w-[320px] pc:gap-x-1.5">
           <CircleImage
             src="/assets/flags/usa.png"
             alt="United State America"
             className="w-6 shrink-[0] md:w-5"
           />
-          <div className="flex flex-col text-sm font-bold pt-1 mb-md:flex-row mb-lg:text-[16px] md:pt-0">
+          <figcaption className="flex flex-col text-sm font-bold pt-1 mb-md:flex-row mb-lg:text-[16px] md:pt-0">
             <span>United State America</span>
             <span className="hidden mb-md:inline">&nbsp;-&nbsp;</span>
             <span>New_York</span>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
         <div className="pl-7 py-1 leading-none md:pl-0 md:py-0">
           <time className="font-black text-2xl">20:17:38</time>
         </div>

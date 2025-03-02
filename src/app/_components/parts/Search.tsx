@@ -9,9 +9,9 @@ export function Search() {
   const [keyword, setKeyword] = useState("");
 
   return (
-    <>
+    <div className="px-1">
       <SearchInput keyword={keyword} setKeyword={setKeyword} />
       {keyword.length >= 3 && <List keyword={keyword} />}
-    </>
+    </div>
   );
 }

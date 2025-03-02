@@ -4,8 +4,9 @@
 
 :root {
   --background: #ffffff;
-  --background-gray: #f9f9f9;
+  --background-gray: #fafafa;
   --foreground: #0f102a;
+  --black-300: #747474;
   --white: #ffffff;
   --blue: #434f90;
   --red: #e26f6f;

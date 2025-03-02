@@ -27,7 +27,7 @@ export function SearchInput({ keyword, setKeyword }: Props) {
       <InputText
         className={
           keyword.length >= 3
-            ? `rounded-tl-md rounded-tr-md border-b-0`
+            ? `rounded-none rounded-tl-md rounded-tr-md border-b-0`
             : `rounded-md`
         }
         value={keyword}

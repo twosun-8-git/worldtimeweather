@@ -1,6 +1,6 @@
 import { cn } from "@/app/utils";
 
-export function Time() {
+export function LargeTimer() {
   const style =
     "w-full h-full text-10xl-vw font-black leading-none flex items-center justify-between";
 
