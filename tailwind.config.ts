@@ -27,6 +27,7 @@ export default {
         "mb-md": "375px",
         "mb-lg": "414px",
         pc: "940px",
+        desktop: "980px",
       },
       maxWidth: {
         "900": "900px",

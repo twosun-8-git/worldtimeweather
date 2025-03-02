@@ -3,14 +3,16 @@ import { cn } from "@/app/utils";
 import { CloseIcon } from "../icons";
 
 type Props = {
+  className?: string;
   onClick: () => void;
   size?: "l" | "m";
 };
 
-export function CloseButton({ onClick, size = "m" }: Props) {
+export function CloseButton({ className, onClick, size = "m" }: Props) {
   const switchSize = size === "m" ? 12 : 20;
 
-  const baseStyle = "flex items-center justify-center border rounded-full";
+  const baseStyle =
+    "flex items-center justify-center border rounded-full cursor-pointer";
 
   const colorStyle =
     size === "m"
@@ -21,7 +23,7 @@ export function CloseButton({ onClick, size = "m" }: Props) {
     <button
       type="button"
       onClick={onClick}
-      className={cn(baseStyle, colorStyle)}
+      className={cn(baseStyle, colorStyle, className)}
     >
       <CloseIcon size={switchSize} color="#ffffff" />
     </button>
