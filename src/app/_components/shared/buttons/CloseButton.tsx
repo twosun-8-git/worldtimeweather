@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/app/utils";
 
 import { CloseIcon } from "../icons";
@@ -5,17 +7,17 @@ import { CloseIcon } from "../icons";
 type Props = {
   className?: string;
   onClick: () => void;
-  size?: "l" | "m";
+  size?: "lg" | "md";
 };
 
-export function CloseButton({ className, onClick, size = "m" }: Props) {
-  const switchSize = size === "m" ? 12 : 20;
+export function CloseButton({ className, onClick, size = "md" }: Props) {
+  const switchSize = size === "md" ? 12 : 20;
 
   const baseStyle =
     "flex items-center justify-center border rounded-full cursor-pointer";
 
   const colorStyle =
-    size === "m"
+    size === "md"
       ? "w-5 h-5 bg-red border-red"
       : "w-9 h-9 bg-transparent border-white";
 

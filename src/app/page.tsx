@@ -1,6 +1,5 @@
 import { Container } from "@/app/_components/layouts";
-import { Modal } from "@/app/_components/layouts";
-import { Main } from "@/app/_components/blocks";
+import { Main, Modal } from "@/app/_components/blocks";
 import {
   Ads,
   ActiveCotunryInfo,

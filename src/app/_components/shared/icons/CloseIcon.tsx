@@ -9,6 +9,5 @@ type Props = {
 };
 
 export function CloseIcon({ className, size = 10, color = "#94949d" }: Props) {
-  const baseStyle = "mt-0.5";
-  return <X size={size} color={color} className={cn(baseStyle, className)} />;
+  return <X size={size} color={color} className={cn(className)} />;
 }

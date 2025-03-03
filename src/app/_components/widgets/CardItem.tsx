@@ -1,6 +1,8 @@
+"use client";
+
 import { cn } from "@/app/utils";
 import { CircleImage, MediumTimer } from "@/app/_components/shared";
-import { CloseIcon } from "@/app/_components/shared";
+import { CloseButton } from "../shared";
 
 export function CardItem() {
   const style =
@@ -30,9 +32,10 @@ export function CardItem() {
           <span>36°C / 96.8°F</span>
         </div>
       </div>
-      <button className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2.5 sm:-right-2.5">
-        <CloseIcon size={14} color="#ffffff" className="mt-0" />
-      </button>
+      <CloseButton
+        className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2.5 sm:-right-2.5"
+        onClick={() => console.log(1)}
+      />
     </div>
   );
 }

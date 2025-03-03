@@ -1,16 +1,45 @@
 "use client";
 
-import { InputText } from "../shared";
-import { TextArea } from "../shared";
-import { Label } from "../shared";
-import { SubmitButton } from "../shared";
+import { useEffect, useRef } from "react";
+import { useAtom } from "jotai";
+
+import { visibleModalAtom } from "@/app/_atoms";
 import { CloseButton } from "../shared";
+import { Form } from "@/app/_components/widgets";
 
 export function Modal() {
+  const [visibleModal, setVisibleModal] = useAtom(visibleModalAtom);
+
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    if (dialogRef.current) {
+      if (visibleModal) {
+        dialogRef.current.showModal();
+        document.body.style.overflow = "hidden";
+      } else {
+        dialogRef.current.close();
+        document.body.style.overflow = "";
+      }
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [visibleModal]);
+
+  const handleBackdropClick = (event: React.MouseEvent<HTMLDialogElement>) => {
+    if (event.target === dialogRef.current) {
+      setVisibleModal(false);
+    }
+  };
+
   return (
     <dialog
-      className="fixed top-0 flex items-center justify-center w-full h-full bg-black bg-opacity-80"
-      open
+      ref={dialogRef}
+      onClick={handleBackdropClick}
+      className={`fixed top-0 flex items-center justify-center w-full h-full bg-transparent ${
+        !visibleModal ? "hidden" : ""
+      }`}
     >
       <div className="w-[92%] max-w-900">
         <div className="bg-white flex flex-col rounded-lg overflow-hidden md:flex-row">
@@ -49,24 +78,11 @@ export function Modal() {
             </dl>
           </div>
           <div className="py-3 px-4 bg-background-gray md:w-[356px] md:shrink-0 md:p-6">
-            <form className="flex flex-col gap-y-2 md:gap-y-4">
-              <Label id="name" label="Name">
-                <InputText />
-              </Label>
-              <Label id="email" label="Email">
-                <InputText />
-              </Label>
-              <Label id="message" label="Message">
-                <TextArea />
-              </Label>
-              <div className="flex justify-center md:mt-2">
-                <SubmitButton />
-              </div>
-            </form>
+            <Form />
           </div>
         </div>
         <div className="flex justify-center mt-4 md:absolute md:top-0 md:right-[4%] pc:top-2 pc:right-4">
-          <CloseButton onClick={() => console.log(1)} size="l" />
+          <CloseButton onClick={() => setVisibleModal(false)} size="lg" />
         </div>
       </div>
     </dialog>
