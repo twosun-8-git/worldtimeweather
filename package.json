@@ -1,5 +1,5 @@
 {
-  "name": "m",
+  "name": "world-time-weather",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,9 +15,12 @@
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
     "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.16",
+    "nodemailer": "^6.9.16",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
