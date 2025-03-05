@@ -22,9 +22,6 @@ export function Modal() {
         document.body.style.overflow = "";
       }
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
   }, [visibleModal]);
 
   const handleBackdropClick = (event: React.MouseEvent<HTMLDialogElement>) => {
