@@ -1,42 +1,75 @@
+"use client";
+
+import { useState } from "react";
 import { Controller, useForm, SubmitHandler } from "react-hook-form";
 
-import { ErrorMessage, Label, InputText, TextArea } from "../shared/forms";
-import { SubmitButton } from "../shared/buttons";
+import { sendContactEmail } from "@/app/_actions";
+import {
+  ErrorMessage,
+  Label,
+  InputText,
+  SubmitedMessage,
+  TextArea,
+} from "@/app/_components/shared";
+import { SubmitButton } from "@/app/_components/shared";
 
 type Forms = {
   name: string;
   email: string;
   message: string;
+  website: string;
 };
 
 export function Form() {
+  const [submitResult, setSubmitResult] = useState<boolean | null>(null);
+
   const defaultValues = {
     name: "",
     email: "",
     message: "",
+    website: "",
   };
 
   const {
     control,
     handleSubmit,
-    // formState: { isSubmitting, isSubmitted, isSubmitSuccessful },
+    reset,
+    watch,
+    formState: { isSubmitting, isValid },
   } = useForm<Forms>({
     defaultValues,
   });
 
-  const onSubmit: SubmitHandler<Forms> = (data) => console.log(data);
+  const website = watch("website");
+
+  const onSubmit: SubmitHandler<Forms> = async (data) => {
+    if (website) {
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
+
+    const result = await sendContactEmail(formData);
+
+    if (result.success) {
+      setSubmitResult(true);
+      reset();
+    } else {
+      setSubmitResult(false);
+    }
+  };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col gap-y-2 md:gap-y-4"
     >
-      {/* <p>{isSubmitting}</p>
-      <p>{isSubmitted}</p>
-      <p>{isSubmitSuccessful}</p> */}
       <Controller
         name="name"
-        rules={{ required: "名前が入力されてないようです。" }}
+        rules={{ required: "Name is required." }}
         control={control}
         render={({ field, fieldState }) => (
           <Label label="Name">
@@ -52,7 +85,13 @@ export function Form() {
       />
       <Controller
         name="email"
-        rules={{ required: "メールアドレスが入力されてないようです。" }}
+        rules={{
+          required: "Email is required.",
+          pattern: {
+            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            message: "Enter a valid email address.",
+          },
+        }}
         control={control}
         render={({ field, fieldState }) => (
           <Label label="Email">
@@ -68,7 +107,7 @@ export function Form() {
       />
       <Controller
         name="message"
-        rules={{ required: "本文が入力されてないようです。" }}
+        rules={{ required: "Message cannot be empty." }}
         control={control}
         render={({ field, fieldState }) => (
           <Label label="Message">
@@ -79,8 +118,29 @@ export function Form() {
           </Label>
         )}
       />
+      <Controller
+        name="website"
+        control={control}
+        render={({ field }) => (
+          <input
+            type="text"
+            className="absolute -left-[9999px] opacity-0 pointer-events-none"
+            tabIndex={-1}
+            aria-hidden="true"
+            {...field}
+          />
+        )}
+      />
       <div className="flex justify-center md:mt-2">
-        <SubmitButton />
+        {submitResult !== null ? (
+          <SubmitedMessage result={submitResult} onClick={reset} />
+        ) : (
+          <SubmitButton
+            className={!isValid || isSubmitting ? "opacity-50" : ""}
+            disabled={isSubmitting}
+            label={isSubmitting ? "Submiting..." : "Submit"}
+          />
+        )}
       </div>
     </form>
   );

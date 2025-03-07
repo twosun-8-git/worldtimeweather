@@ -1,8 +1,7 @@
-import { NextResponse } from "next/server";
+"use server";
+
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
-
-import { form } from "@/types";
 import { SITE_NAME, SITE_URL, COMPANY_NAME } from "@/consts";
 
 const transportOptions: SMTPTransport.Options = {
@@ -17,36 +16,35 @@ const transportOptions: SMTPTransport.Options = {
 
 const transporter = nodemailer.createTransport(transportOptions);
 
-export async function POST(request: Request) {
+export async function sendContactEmail(formData: FormData) {
+  const name = formData.get("name") as string;
+  const email = formData.get("email") as string;
+  const message = formData.get("message") as string;
+
+  if (!name || !email || !message) {
+    return { success: false, message: "必須項目が不足しています" };
+  }
+
   try {
-    const data: form = await request.json();
-
-    if (!data.name || !data.email || !data.message) {
-      return NextResponse.json(
-        { error: "必須項目が不足しています" },
-        { status: 400 }
-      );
-    }
-
     // 管理者向けメール
     const adminMailOptions = {
       from: process.env.SMTP_FROM,
       to: process.env.SMTP_TO,
-      subject: `${data.name}様よりお問い合わせ`,
+      subject: `${name}様よりお問い合わせ`,
       text: `
-${data.name}様よりお問い合わせがありました。
+${name}様よりお問い合わせがありました。
 内容を確認してください。
 
 ==============================================
 
 ■お名前
-${data.name}
+${name}
 
 ■返信先メールアドレス
-${data.email}
+${email}
 
 ■ご意見・お問い合わせ内容
-${data.message}
+${message}
 ==============================================
       `.trim(),
     };
@@ -54,10 +52,10 @@ ${data.message}
     // ユーザー向け自動返信メール
     const userMailOptions = {
       from: process.env.SMTP_FROM,
-      to: data.email,
+      to: email,
       subject: `お問い合わせありがとうございます`,
       text: `
-${data.name}様
+${name}様
 
 いつもご利用ありがとうございます。
 下記の内容でお問い合わせを受け付けました。
@@ -65,13 +63,13 @@ ${data.name}様
 ==============================================
 
 ■お名前
-${data.name}
+${name}
 
 ■返信先メールアドレス
-${data.email}
+${email}
 
 ■ご意見・お問い合わせ内容
-${data.message}
+${message}
 ==============================================
 
 内容を確認後に改めてご連絡差し上げますので今しばらくお待ちください。
@@ -85,21 +83,15 @@ ${data.message}
       `.trim(),
     };
 
-    // 両方のメールを送信
+    // 並行でメール送信
     await Promise.all([
       transporter.sendMail(adminMailOptions),
       transporter.sendMail(userMailOptions),
     ]);
 
-    return NextResponse.json(
-      { message: "メールを送信しました" },
-      { status: 200 }
-    );
+    return { success: true, message: "メールを送信しました" };
   } catch (error) {
     console.error(error);
-    return NextResponse.json(
-      { message: "メール送信に失敗しました" },
-      { status: 500 }
-    );
+    return { success: false, message: "メール送信に失敗しました" };
   }
 }
