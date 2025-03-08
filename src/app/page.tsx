@@ -6,7 +6,7 @@ import {
   ActiveCotunryTime,
   CardList,
   Search,
-} from "./_components/parts";
+} from "@/app/_components/parts";
 
 export default function Home() {
   return (

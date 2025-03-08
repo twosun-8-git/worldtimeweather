@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { cn } from "@/app/utils";
+import { cn } from "../../../../utils";
 
 type Props = {
   className?: string;

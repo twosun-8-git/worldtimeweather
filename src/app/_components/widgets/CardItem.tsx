@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/app/utils";
+import { cn } from "../../../utils";
 import { CircleImage, MediumTimer } from "@/app/_components/shared";
 import { CloseButton } from "../shared";
 

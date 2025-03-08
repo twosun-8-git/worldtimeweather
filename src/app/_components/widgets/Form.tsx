@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Controller, useForm, SubmitHandler } from "react-hook-form";
 
-import { sendContactEmail } from "@/app/_actions";
+import { sendContactEmail } from "@/actions";
 import {
   ErrorMessage,
   Label,

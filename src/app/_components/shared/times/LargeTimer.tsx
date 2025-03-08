@@ -1,4 +1,4 @@
-import { cn } from "@/app/utils";
+import { cn } from "../../../../utils";
 
 export function LargeTimer() {
   const style =

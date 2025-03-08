@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/app/utils";
+import { cn } from "../../../../utils";
 
 import { CloseIcon } from "../icons";
 
