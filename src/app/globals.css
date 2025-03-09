@@ -4,7 +4,19 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --background-gray: #fafafa;
+  --foreground: #0f102a;
+  --black-300: #747474;
+  --white: #ffffff;
+  --blue: #434f90;
+  --green: #549a69;
+  --red: #e26f6f;
+  --navy-100: #b5bac5;
+  --gray-100: #efefef;
+  --gray-200: #cbcedb;
+  --gray-300: #bec1c9;
+  --gray-500: #6f7282;
+  --gray-700: #94949d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +29,40 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/*   開いた状態のダイアログ  */
+dialog[open] {
+  opacity: 1;
+}
+
+/*   閉じた状態のダイアログ   */
+dialog {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+
+/*   開く前の状態  */
+/* 詳細度が同じであるため、前の dialog[open] ルールの後に置かなければ効果がありません */
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+  }
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition: all 0.4s allow-discrete;
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 80%);
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+  }
 }
