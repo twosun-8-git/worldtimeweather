@@ -1,17 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest) {
-  // ヘッダーから IP を取得
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0] || // CloudFront やリバースプロキシ環境向け
-    req.headers.get("cf-connecting-ip") || // Cloudflare の場合
-    req.headers.get("true-client-ip") || // 一部のプロキシ環境
-    "IP取得失敗"; // 取得できない場合
+  let ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0] || // CloudFront, Reverse Proxy 用
+    req.headers.get("cf-connecting-ip") || // Cloudflare 用
+    req.headers.get("true-client-ip") || // 一部のプロキシ
+    req.headers.get("x-real-ip") || // Nginx などで利用
+    req.headers.get("forwarded")?.match(/for=([^;]+)/)?.[1]; // `Forwarded` ヘッダー対応
 
-  // IP をコンソールに記録（Amplify の CloudWatch で確認可能）
-  console.log("Visitor IP:", ip);
+  // ローカル開発環境の場合
+  if (!ip || ip === "127.0.0.1" || ip === "::1") {
+    ip = "localhost (開発環境)";
+  }
 
-  // IP をレスポンスのヘッダーに追加（必要に応じて）
+  console.log("Visitor IP:", ip); // ログ出力（Amplify 環境では CloudWatch に記録）
+
+  // IP をレスポンスのヘッダーに追加（フロントエンドで取得できるようにする）
   const res = NextResponse.next();
   res.headers.set("X-Visitor-IP", ip);
 
