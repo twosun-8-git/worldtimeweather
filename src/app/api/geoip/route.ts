@@ -2,48 +2,48 @@
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  // IPアドレスの取得
   const forwardedFor = request.headers.get("x-forwarded-for");
   const ip = forwardedFor ? forwardedFor.split(",")[0] : "unknown";
 
-  // 開発環境用のフォールバック
-  const devEnvironment =
-    ip === "127.0.0.1" || ip === "::1" || ip === "localhost";
+  // 開発環境の場合はモックデータを返す
+  if (ip === "127.0.0.1" || ip === "::1" || ip === "unknown") {
+    return NextResponse.json({
+      ip: "開発環境",
+      country: "Japan",
+      countryCode: "JP",
+      city: "Tokyo",
+      timezone: "Asia/Tokyo",
+    });
+  }
 
   try {
-    // 本番環境または開発環境に応じて処理を分ける
-    if (devEnvironment) {
-      // 開発環境用のモックデータ
-      return NextResponse.json({
-        ip: "開発環境",
-        country: "Japan",
-        countryCode: "JP",
-        timezone: "Asia/Tokyo",
-      });
-    } else {
-      // 本番環境: 実際のIPからgeo情報を取得
-      const response = await fetch(`https://ipapi.co/${ip}/json/`);
-      const data = await response.json();
+    // ipinfo.ioを使用して地理情報を取得
+    const response = await fetch(`https://ipinfo.io/${ip}/json`);
 
-      if (data.error) {
-        throw new Error(data.reason || "Unknown error");
-      }
-
-      return NextResponse.json({
-        ip,
-        country: data.country_name,
-        countryCode: data.country_code,
-        timezone: data.timezone,
-      });
+    if (!response.ok) {
+      throw new Error(`ipinfo.io responded with status: ${response.status}`);
     }
-  } catch (error) {
-    console.error("GeoIP API error:", error);
 
-    // エラー時のフォールバック
+    const data = await response.json();
+
+    // ipinfo.ioからのレスポンスを整形して返す
+    return NextResponse.json({
+      ip,
+      country: data.country === "JP" ? "Japan" : data.country,
+      countryCode: data.country || "XX",
+      city: data.city || "Unknown",
+      region: data.region || "Unknown",
+      timezone: data.timezone || "UTC",
+    });
+  } catch (error) {
+    console.error("API error:", error);
+
+    // エラー時はデフォルト値を返す
     return NextResponse.json({
       ip,
       country: "Unknown",
       countryCode: "XX",
+      city: "Unknown",
       timezone: "UTC",
     });
   }
