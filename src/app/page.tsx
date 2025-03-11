@@ -7,8 +7,7 @@ import {
   CardList,
   Search,
 } from "@/app/_components/parts";
-
-import { Ip } from "./ip";
+import { GeoInfo } from "./_components/ip";
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         <ActiveCotunryTime />
         <Search />
         <CardList />
-        <Ip />
+        <GeoInfo />
       </Main>
       <Modal />
     </Container>
