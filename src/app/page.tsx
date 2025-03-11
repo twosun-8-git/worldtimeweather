@@ -8,6 +8,8 @@ import {
   Search,
 } from "@/app/_components/parts";
 
+import { Ip } from "./ip";
+
 export default function Home() {
   return (
     <Container>
@@ -17,6 +19,7 @@ export default function Home() {
         <ActiveCotunryTime />
         <Search />
         <CardList />
+        <Ip />
       </Main>
       <Modal />
     </Container>
