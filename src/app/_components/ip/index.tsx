@@ -7,6 +7,7 @@ type GeoInfoData = {
   ip: string;
   country: string;
   countryCode: string;
+  region: string;
   timezone: string;
 };
 
@@ -45,6 +46,7 @@ export function GeoInfo() {
       <p className="text-xs">
         国: {data.country} ({data.countryCode})
       </p>
+      <p className="text-xs">region: {data.region}</p>
       <p className="text-xs">タイムゾーン: {data.timezone}</p>
     </div>
   );

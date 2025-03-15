@@ -36,7 +36,7 @@ export async function GET(request: Request) {
       country: countries.getName(data.country, "en"),
       countryCode: data.country,
       region: data.region,
-      timezone: data.timezone || "UTC",
+      timezone: data.timezone,
     });
   } catch (error) {
     console.error("API error:", error);
