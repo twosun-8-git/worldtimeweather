@@ -1,7 +1,12 @@
 // src/app/api/geoip/route.ts
 import { NextResponse } from "next/server";
 
+import countries from "i18n-iso-countries";
+import countriesEN from "i18n-iso-countries/langs/en.json";
+
 export async function GET(request: Request) {
+  countries.registerLocale(countriesEN);
+
   const forwardedFor = request.headers.get("x-forwarded-for");
   const ip = forwardedFor ? forwardedFor.split(",")[0] : "unknown";
 
@@ -11,7 +16,6 @@ export async function GET(request: Request) {
       ip: "開発環境",
       country: "Japan",
       countryCode: "JP",
-      city: "Tokyo",
       timezone: "Asia/Tokyo",
     });
   }
@@ -29,10 +33,9 @@ export async function GET(request: Request) {
     // ipinfo.ioからのレスポンスを整形して返す
     return NextResponse.json({
       ip,
-      country: data.country === "JP" ? "Japan" : data.country,
-      countryCode: data.country || "XX",
-      city: data.city || "Unknown",
-      region: data.region || "Unknown",
+      country: countries.getName(data.country, "en"),
+      countryCode: data.country,
+      region: data.region,
       timezone: data.timezone || "UTC",
     });
   } catch (error) {
@@ -43,7 +46,6 @@ export async function GET(request: Request) {
       ip,
       country: "Unknown",
       countryCode: "XX",
-      city: "Unknown",
       timezone: "UTC",
     });
   }
