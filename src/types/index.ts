@@ -4,3 +4,10 @@ export type form = {
   message: string;
   website: string;
 };
+
+export type localData = {
+  country: string;
+  code: string;
+  timezone: string;
+  timeStamp: Date;
+};

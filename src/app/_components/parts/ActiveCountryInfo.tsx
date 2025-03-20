@@ -1,4 +1,9 @@
+"use client";
+
+import { useAtomValue } from "jotai";
+
 import { cn } from "../../../utils";
+import { localDataAtom } from "@/app/_atoms";
 
 import {
   CountryTimezone,
@@ -8,6 +13,10 @@ import {
 } from "@/app/_components/widgets";
 
 export function ActiveCotunryInfo() {
+  const localData = useAtomValue(localDataAtom);
+
+  const { country, code, timezone } = localData;
+
   const style =
     "flex flex-col gap-y-1 text-gray-500 text-xs border border-gray-100 p-2 rounded";
 
@@ -17,7 +26,7 @@ export function ActiveCotunryInfo() {
 
   return (
     <div className="flex items-start w-full justify-between md:items-center pc:px-1">
-      <CountryTimezone country="United State America" timezone="New_York" />
+      <CountryTimezone country={country} code={code} timezone={timezone} />
       <div className={cn(style, mdStyle, containerStyle)}>
         <Today />
         <Weather />
