@@ -1,71 +1,35 @@
 "use client";
 
 import { cn } from "../../../../utils";
-import { useAtomValue } from "jotai";
-import { useState, useEffect } from "react";
-import { localDataAtom } from "@/app/_atoms";
+import { useTime } from "@/app/_hooks/useTime";
 
 export function LargeTimer() {
+  const { timeDigits, dateTimeISO } = useTime();
+  const digits =
+    timeDigits.length > 0
+      ? timeDigits
+      : ["0", "0", ":", "0", "0", ":", "0", "0"];
+
   const style =
-    "w-full h-full text-10xl-vw font-black leading-none flex items-center justify-between";
+    "w-full h-full text-10xl-vw font-black text-center leading-none flex items-center justify-between";
 
   const styleContainer = "pc:text-10xl-fix";
 
-  const localData = useAtomValue(localDataAtom);
-
-  const { timezone } = localData;
-
-  const [timeDigits, setTimeDigits] = useState<string[]>([]);
-
-  const updateTime = () => {
-    if (timezone) {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: timezone,
-        hour: "2-digit" as const,
-        minute: "2-digit" as const,
-        second: "2-digit" as const,
-        hour12: false,
-      };
-
-      try {
-        const timeString = new Intl.DateTimeFormat("ja-JP", options).format(
-          now
-        );
-
-        const digits = [];
-        for (let i = 0; i < timeString.length; i++) {
-          const char = timeString[i];
-          if (char === ":" || !isNaN(parseInt(char, 10))) {
-            digits.push(char);
-          }
-        }
-
-        // 桁数が8になるように調整（時：分：秒）
-        if (digits.length === 8) {
-          setTimeDigits(digits);
-        }
-      } catch (error) {
-        console.error(`タイムゾーン '${timezone}' での時刻取得エラー:`, error);
-      }
-    }
-  };
-
-  useEffect(() => {
-    updateTime();
-    const intervalId = setInterval(updateTime, 1000);
-    return () => clearInterval(intervalId);
-  }, [timezone]);
-
-  // 現在の時刻をISO形式で取得（datetime属性用）
-  const dateTimeAttr = new Date().toISOString();
+  const opacityStyle = timeDigits.length > 0 ? "opaticy-100" : "opacity-10";
 
   return (
-    <time dateTime={dateTimeAttr} className={cn(style, styleContainer)}>
-      {timeDigits.map((digit, index) => (
+    <time
+      dateTime={dateTimeISO}
+      className={cn(style, styleContainer, opacityStyle)}
+    >
+      {digits.map((digit, index) => (
         <span
           key={index}
-          className={cn(digit === ":" ? "-mt-[0.2em] pc:-mt-[0.18em]" : "")}
+          className={cn(
+            digit === ":"
+              ? "shrink-0 w-[6%] -mt-[0.2em] pc:-mt-[0.18em]"
+              : "shrink-0 w-[14.666%]"
+          )}
         >
           {digit}
         </span>

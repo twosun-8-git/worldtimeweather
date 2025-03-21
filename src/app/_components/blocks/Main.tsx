@@ -1,8 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useSetAtom } from "jotai";
 
+import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
 import { useGeoInfo } from "@/app/_hooks/useGeoInfo";
 import { localDataAtom } from "@/app/_atoms";
 
@@ -11,16 +12,46 @@ type Props = {
 };
 
 export function Main({ children }: Props) {
+  const fetchGeoInfo = useGeoInfo();
   const setLocalData = useSetAtom(localDataAtom);
 
-  const geoInfoByLocalStorage = localStorage.getItem("wtw_active");
-  const fetchGeoInfo = useGeoInfo();
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  if (geoInfoByLocalStorage) {
-    setLocalData(JSON.parse(geoInfoByLocalStorage));
-  } else {
-    fetchGeoInfo();
-  }
+  useEffect(() => {
+    if (isInitialized) return;
+
+    const initializeGeoData = async () => {
+      try {
+        if (typeof window !== "undefined") {
+          const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_ACTIVE);
+
+          if (storedData) {
+            const parsedData = JSON.parse(storedData);
+            setLocalData(parsedData);
+          } else {
+            const fetchedData = await fetchGeoInfo();
+
+            if (fetchedData) {
+              // 取得したデータをatomとローカルストレージに保存
+              setLocalData(fetchedData);
+              localStorage.setItem(
+                LOCAL_STORAGE_KEY_ACTIVE,
+                JSON.stringify(fetchedData)
+              );
+            }
+          }
+
+          setIsInitialized(true);
+        }
+      } catch (error) {
+        console.error("Geo data initialization error:", error);
+      }
+    };
+
+    initializeGeoData();
+
+    return;
+  }, [setLocalData, fetchGeoInfo, isInitialized]);
 
   return <main className="w-full">{children}</main>;
 }
