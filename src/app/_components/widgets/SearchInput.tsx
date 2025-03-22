@@ -7,10 +7,10 @@ import { InputText, SearchIcon } from "@/app/_components/shared";
 
 type Props = {
   keyword: string;
-  setKeyword: (value: string) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export function SearchInput({ keyword, setKeyword }: Props) {
+export function SearchInput({ keyword, onChange }: Props) {
   const [isFocused, setIsFocused] = useState(false);
 
   const baseStyle =
@@ -26,12 +26,12 @@ export function SearchInput({ keyword, setKeyword }: Props) {
       </div>
       <InputText
         className={
-          keyword.length >= 3
+          keyword.length >= 2
             ? `rounded-none rounded-tl-md rounded-tr-md border-b-0`
             : `rounded-md`
         }
         value={keyword}
-        onChange={(e) => setKeyword(e.target.value)}
+        onChange={onChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(keyword.length > 0 ? true : false)}
       />
