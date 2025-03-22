@@ -12,43 +12,28 @@ type Props = {
 export function ListItemButton({ code }: Props) {
   const [isSaved, setIsSaved] = useState(false);
 
-  useEffect(() => {
-    const checkSavedStatus = () => {
-      const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
-      if (storedData) {
-        try {
-          const countries = JSON.parse(storedData);
-          if (Array.isArray(countries)) {
-            setIsSaved(countries.includes(code));
-            return;
-          }
-        } catch (e) {
-          console.error("Error parsing stored countries:", e);
-        }
-      }
-      setIsSaved(false);
-    };
+  const getStoredCountries = (): string[] => {
+    if (typeof window === "undefined") return [];
 
-    if (typeof window !== "undefined") {
-      checkSavedStatus();
+    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
+    if (!storedData) return [];
+
+    try {
+      const countries = JSON.parse(storedData);
+      return Array.isArray(countries) ? countries : [];
+    } catch (e) {
+      console.error("Error parsing stored countries:", e);
+      return [];
     }
+  };
+
+  useEffect(() => {
+    const countries = getStoredCountries();
+    setIsSaved(countries.includes(code));
   }, [code]);
 
   const handleSave = () => {
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
-    let countries: string[] = [];
-
-    if (storedData) {
-      try {
-        countries = JSON.parse(storedData);
-        if (!Array.isArray(countries)) {
-          countries = [];
-        }
-      } catch (e) {
-        console.error("Error parsing stored countries:", e);
-        countries = [];
-      }
-    }
+    const countries = getStoredCountries();
 
     if (!countries.includes(code)) {
       countries.push(code);
@@ -62,24 +47,14 @@ export function ListItemButton({ code }: Props) {
   };
 
   const handleRemove = () => {
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
+    const countries = getStoredCountries();
+    const updatedCountries = countries.filter((item) => item !== code);
 
-    if (storedData) {
-      try {
-        const countries = JSON.parse(storedData);
-
-        if (Array.isArray(countries)) {
-          const updatedCountries = countries.filter((item) => item !== code);
-          localStorage.setItem(
-            LOCAL_STORAGE_KEY_COUNTRIES,
-            JSON.stringify(updatedCountries)
-          );
-          setIsSaved(false);
-        }
-      } catch (e) {
-        console.error("Error parsing stored countries:", e);
-      }
-    }
+    localStorage.setItem(
+      LOCAL_STORAGE_KEY_COUNTRIES,
+      JSON.stringify(updatedCountries)
+    );
+    setIsSaved(false);
   };
 
   return (
