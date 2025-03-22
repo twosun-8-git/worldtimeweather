@@ -240,12 +240,6 @@
     "timezone": "America/Toronto"
   },
   {
-    "name": "Cape Verde",
-    "code-2": "cv",
-    "code-3": "cpv",
-    "timezone": "Atlantic/Cape_Verde"
-  },
-  {
     "name": "Cayman Islands",
     "code-2": "ky",
     "code-3": "cym",
@@ -421,7 +415,7 @@
   },
   {
     "name": "Eswatini",
-    "code-2": "",
+    "code-2": "sz",
     "code-3": "swz",
     "timezone": "Africa/Mbabane"
   },
@@ -483,7 +477,7 @@
     "name": "Gibraltar",
     "code-2": "gi",
     "code-3": "gib",
-    "timezone": "Europe/Gibraltar（"
+    "timezone": "Europe/Gibraltar"
   },
   {
     "name": "Greece",
@@ -717,577 +711,577 @@
     "name": "Madagascar",
     "code-2": "mg",
     "code-3": "mdg",
-    "timezone": "UTC"
+    "timezone": "Indian/Antananarivo"
   },
   {
     "name": "Malawi",
     "code-2": "mw",
     "code-3": "mwi",
-    "timezone": "UTC"
+    "timezone": "Africa/Blantyre"
   },
   {
     "name": "Malaysia",
     "code-2": "my",
     "code-3": "mys",
-    "timezone": "UTC"
+    "timezone": "Asia/Kuala_Lumpur"
   },
   {
     "name": "Maldives",
     "code-2": "mv",
     "code-3": "mdv",
-    "timezone": "UTC"
+    "timezone": "Indian/Maldives"
   },
   {
     "name": "Mali",
     "code-2": "ml",
     "code-3": "mli",
-    "timezone": "UTC"
+    "timezone": "Africa/Bamako"
   },
   {
     "name": "Malta",
     "code-2": "mt",
     "code-3": "mlt",
-    "timezone": "UTC"
+    "timezone": "Europe/Malta"
   },
   {
     "name": "Marshall Islands",
     "code-2": "mh",
     "code-3": "mhl",
-    "timezone": "UTC"
+    "timezone": "Pacific/Majuro"
   },
   {
     "name": "Mauritania",
     "code-2": "mr",
     "code-3": "mrt",
-    "timezone": "UTC"
+    "timezone": "Africa/Nouakchott"
   },
   {
     "name": "Mauritius",
     "code-2": "mu",
     "code-3": "mus",
-    "timezone": "UTC"
+    "timezone": "Indian/Mauritius"
   },
   {
     "name": "Mexico",
     "code-2": "mx",
     "code-3": "mex",
-    "timezone": "UTC"
+    "timezone": "America/Mexico_City"
   },
   {
     "name": "Micronesia",
     "code-2": "fm",
     "code-3": "fsm",
-    "timezone": "UTC"
+    "timezone": "Pacific/Pohnpei"
   },
   {
     "name": "Moldova",
     "code-2": "md",
     "code-3": "mda",
-    "timezone": "UTC"
+    "timezone": "Europe/Chisinau"
   },
   {
     "name": "Monaco",
     "code-2": "mc",
     "code-3": "mco",
-    "timezone": "UTC"
+    "timezone": "Europe/Monaco"
   },
   {
     "name": "Mongolia",
     "code-2": "mn",
     "code-3": "mng",
-    "timezone": "UTC"
+    "timezone": "Asia/Ulaanbaatar"
   },
   {
     "name": "Montenegro",
     "code-2": "me",
     "code-3": "mne",
-    "timezone": "UTC"
+    "timezone": "Europe/Podgorica"
   },
   {
     "name": "Morocco",
     "code-2": "ma",
     "code-3": "mar",
-    "timezone": "UTC"
+    "timezone": "Africa/Casablanca"
   },
   {
     "name": "Mozambique",
     "code-2": "mz",
     "code-3": "moz",
-    "timezone": "UTC"
+    "timezone": "Africa/Maputo"
   },
   {
     "name": "Myanmar",
     "code-2": "mm",
     "code-3": "mmr",
-    "timezone": "UTC"
+    "timezone": "Asia/Yangon"
   },
   {
     "name": "Namibia",
     "code-2": "na",
     "code-3": "nam",
-    "timezone": "UTC"
+    "timezone": "Africa/Windhoek"
   },
   {
     "name": "Nauru",
     "code-2": "nr",
     "code-3": "nru",
-    "timezone": "UTC"
+    "timezone": "Pacific/Nauru"
   },
   {
     "name": "Nepal",
     "code-2": "np",
     "code-3": "npl",
-    "timezone": "UTC"
+    "timezone": "Asia/Kathmandu"
   },
   {
     "name": "Netherlands",
     "code-2": "nl",
     "code-3": "nld",
-    "timezone": "UTC"
+    "timezone": "Europe/Amsterdam"
   },
   {
     "name": "New Zealand",
     "code-2": "nz",
     "code-3": "nzl",
-    "timezone": "UTC"
+    "timezone": "Europe/Auckland"
   },
   {
     "name": "Nicaragua",
     "code-2": "ni",
     "code-3": "nic",
-    "timezone": "UTC"
+    "timezone": "America/Managua"
   },
   {
     "name": "Niger",
     "code-2": "ne",
     "code-3": "ner",
-    "timezone": "UTC"
+    "timezone": "Africa/Niamey"
   },
   {
     "name": "Nigeria",
     "code-2": "ng",
     "code-3": "nga",
-    "timezone": "UTC"
+    "timezone": "Africa/Lagos"
   },
   {
     "name": "North Korea",
     "code-2": "kp",
     "code-3": "prk",
-    "timezone": "UTC"
+    "timezone": "Asia/Pyongyang"
   },
   {
     "name": "North Macedonia",
     "code-2": "mk",
     "code-3": "mkd",
-    "timezone": "UTC"
+    "timezone": "Europe/Skopje"
   },
   {
     "name": "Northern Cyprus",
     "code-2": "cy",
     "code-3": "cyp-n",
-    "timezone": "UTC"
+    "timezone": "Asia/Nicosia"
   },
   {
     "name": "Norway",
     "code-2": "no",
     "code-3": "nor",
-    "timezone": "UTC"
+    "timezone": "Europe/Oslo"
   },
   {
     "name": "Oman",
     "code-2": "om",
     "code-3": "omn",
-    "timezone": "UTC"
+    "timezone": "Asia/Muscat"
   },
   {
     "name": "Pakistan",
     "code-2": "pk",
     "code-3": "pak",
-    "timezone": "UTC"
+    "timezone": "Asia/Karachi"
   },
   {
     "name": "Palau",
     "code-2": "pw",
     "code-3": "plw",
-    "timezone": "UTC"
+    "timezone": "Pacific/Palau"
   },
   {
     "name": "Palestine",
     "code-2": "ps",
     "code-3": "pse",
-    "timezone": "UTC"
+    "timezone": "Asia/Gaza"
   },
   {
     "name": "Panama",
     "code-2": "pa",
     "code-3": "pan",
-    "timezone": "UTC"
+    "timezone": "America/Panama"
   },
   {
     "name": "Papua New Guinea",
     "code-2": "pg",
     "code-3": "png",
-    "timezone": "UTC"
+    "timezone": "Pacific/Port_Moresby"
   },
   {
     "name": "Paraguay",
     "code-2": "py",
     "code-3": "pry",
-    "timezone": "UTC"
+    "timezone": "America/Asuncion"
   },
   {
     "name": "Peru",
     "code-2": "pe",
     "code-3": "per",
-    "timezone": "UTC"
+    "timezone": "America/Lima"
   },
   {
     "name": "Philippines",
     "code-2": "ph",
     "code-3": "phl",
-    "timezone": "UTC"
+    "timezone": "Asia/Manila"
   },
   {
     "name": "Poland",
     "code-2": "pl",
     "code-3": "pol",
-    "timezone": "UTC"
+    "timezone": "Europe/Warsaw"
   },
   {
     "name": "Portugal",
     "code-2": "pt",
     "code-3": "prt",
-    "timezone": "UTC"
+    "timezone": "Europe/Lisbon"
   },
   {
     "name": "Qatar",
     "code-2": "qa",
     "code-3": "qat",
-    "timezone": "UTC"
+    "timezone": "Asia/Qatar"
   },
   {
     "name": "Taiwan",
     "code-2": "tw",
     "code-3": "twn",
-    "timezone": "UTC"
+    "timezone": "Asia/Taipei"
   },
   {
     "name": "Romania",
     "code-2": "ro",
     "code-3": "rou",
-    "timezone": "UTC"
+    "timezone": "Europe/Bucharest"
   },
   {
     "name": "Russia",
     "code-2": "ru",
     "code-3": "rus",
-    "timezone": "UTC"
+    "timezone": "Europe/Moscow"
   },
   {
     "name": "Rwanda",
     "code-2": "rw",
     "code-3": "rwa",
-    "timezone": "UTC"
+    "timezone": "Africa/Kigali"
   },
   {
     "name": "Sahrawi Arab Democratic Republic",
     "code-2": "eh",
     "code-3": "esh",
-    "timezone": "UTC"
+    "timezone": "Africa/El_Aaiun"
   },
   {
     "name": "Saint Kitts and Nevis",
     "code-2": "kn",
     "code-3": "kna",
-    "timezone": "UTC"
+    "timezone": "America/St_Kitts"
   },
   {
     "name": "Saint Lucia",
     "code-2": "lc",
     "code-3": "lca",
-    "timezone": "UTC"
+    "timezone": "America/St_Lucia"
   },
   {
     "name": "Saint Vincent and the Grenadines",
     "code-2": "vc",
     "code-3": "vct",
-    "timezone": "UTC"
+    "timezone": "America/St_Vincent"
   },
   {
     "name": "Samoa",
     "code-2": "ws",
     "code-3": "wsm",
-    "timezone": "UTC"
+    "timezone": "Pacific/Apia"
   },
   {
     "name": "San Marino",
     "code-2": "sm",
     "code-3": "smr",
-    "timezone": "UTC"
+    "timezone": "Europe/San_Marino"
   },
   {
     "name": "Sao Tome and Principe",
     "code-2": "st",
     "code-3": "stp",
-    "timezone": "UTC"
+    "timezone": "Africa/Sao_Tome"
   },
   {
     "name": "Saudi Arabia",
     "code-2": "sa",
     "code-3": "sau",
-    "timezone": "UTC"
+    "timezone": "Asia/Riyadh"
   },
   {
     "name": "Senegal",
     "code-2": "sn",
     "code-3": "sen",
-    "timezone": "UTC"
+    "timezone": "Africa/Dakar"
   },
   {
     "name": "Serbia",
     "code-2": "rs",
     "code-3": "srb",
-    "timezone": "UTC"
+    "timezone": "Europe/Belgrade"
   },
   {
     "name": "Seychelles",
     "code-2": "sc",
     "code-3": "syc",
-    "timezone": "UTC"
+    "timezone": "Indian/Mahe"
   },
   {
     "name": "Sierra Leone",
     "code-2": "sl",
     "code-3": "sle",
-    "timezone": "UTC"
+    "timezone": "Africa/Freetown"
   },
   {
     "name": "Singapore",
     "code-2": "sg",
     "code-3": "sgp",
-    "timezone": "UTC"
+    "timezone": "Asia/Singapore"
   },
   {
     "name": "Slovakia",
     "code-2": "sk",
     "code-3": "svk",
-    "timezone": "UTC"
+    "timezone": "Europe/Bratislava"
   },
   {
     "name": "Slovenia",
     "code-2": "si",
     "code-3": "svn",
-    "timezone": "UTC"
+    "timezone": "Europe/Ljubljana"
   },
   {
     "name": "Solomon Islands",
     "code-2": "sb",
     "code-3": "slb",
-    "timezone": "UTC"
+    "timezone": "Pacific/Guadalcanal"
   },
   {
     "name": "Somalia",
     "code-2": "so",
     "code-3": "som",
-    "timezone": "UTC"
+    "timezone": "Pacific/Guadalcanal"
   },
   {
     "name": "Somaliland",
     "code-2": "so",
     "code-3": "som-l",
-    "timezone": "UTC"
+    "timezone": "Africa/Mogadishu"
   },
   {
     "name": "South Africa",
     "code-2": "za",
     "code-3": "zaf",
-    "timezone": "UTC"
+    "timezone": "Africa/Johannesburg"
   },
   {
     "name": "South Korea",
     "code-2": "kr",
     "code-3": "kor",
-    "timezone": "UTC"
+    "timezone": "Asia/Seoul"
   },
   {
     "name": "South Ossetia",
     "code-2": "",
     "code-3": "ossetia",
-    "timezone": "UTC"
+    "timezone": "Asia/Tbilisi"
   },
   {
     "name": "South Sudan",
     "code-2": "ss",
     "code-3": "ssd",
-    "timezone": "UTC"
+    "timezone": "Africa/Juba"
   },
   {
     "name": "Spain",
     "code-2": "es",
     "code-3": "esp",
-    "timezone": "UTC"
+    "timezone": "Europe/Madrid"
   },
   {
     "name": "Sri Lanka",
     "code-2": "lk",
     "code-3": "lka",
-    "timezone": "UTC"
+    "timezone": "Asia/Colombo"
   },
   {
     "name": "State of Palestine",
     "code-2": "ps",
     "code-3": "pse",
-    "timezone": "UTC"
+    "timezone": "Asia/Gaza"
   },
   {
     "name": "Sudan",
     "code-2": "sd",
     "code-3": "sdn",
-    "timezone": "UTC"
+    "timezone": "Africa/Khartoum"
   },
   {
     "name": "Suriname",
     "code-2": "sr",
     "code-3": "sur",
-    "timezone": "UTC"
+    "timezone": "America/Paramaribo"
   },
   {
     "name": "Sweden",
     "code-2": "se",
     "code-3": "swe",
-    "timezone": "UTC"
+    "timezone": "Europe/Stockholm"
   },
   {
     "name": "Switzerland",
-    "code-2": "sz",
+    "code-2": "ch",
     "code-3": "che",
-    "timezone": "UTC"
+    "timezone": "Europe/Zurich"
   },
   {
     "name": "Syria",
     "code-2": "sy",
     "code-3": "syr",
-    "timezone": "UTC"
+    "timezone": "Asia/Damascus"
   },
   {
     "name": "Tajikistan",
     "code-2": "tj",
     "code-3": "tjk",
-    "timezone": "UTC"
+    "timezone": "Asia/Dushanbe"
   },
   {
     "name": "Tanzania",
     "code-2": "tz",
     "code-3": "tza",
-    "timezone": "UTC"
+    "timezone": "Africa/Dar_es_Salaam"
   },
   {
     "name": "Thailand",
     "code-2": "th",
     "code-3": "tha",
-    "timezone": "UTC"
+    "timezone": "Asia/Bangkok"
   },
   {
     "name": "Timor-Leste",
     "code-2": "tl",
     "code-3": "tls",
-    "timezone": "UTC"
+    "timezone": "Asia/Dili"
   },
   {
     "name": "Togo",
     "code-2": "tg",
     "code-3": "tgo",
-    "timezone": "UTC"
+    "timezone": "Africa/Lome"
   },
   {
     "name": "Tonga",
     "code-2": "to",
     "code-3": "ton",
-    "timezone": "UTC"
+    "timezone": "Pacific/Tongatapu"
   },
   {
     "name": "Transnistria",
     "code-2": "md",
     "code-3": "pmd",
-    "timezone": "UTC"
+    "timezone": "Europe/Chisinau"
   },
   {
     "name": "Trinidad and Tobago",
     "code-2": "tt",
     "code-3": "tto",
-    "timezone": "UTC"
+    "timezone": "America/Port_of_Spain"
   },
   {
     "name": "Tunisia",
     "code-2": "tn",
     "code-3": "tun",
-    "timezone": "UTC"
+    "timezone": "Africa/Tunis"
   },
   {
     "name": "Turkey",
     "code-2": "tr",
     "code-3": "tur",
-    "timezone": "UTC"
+    "timezone": "Europe/Istanbul"
   },
   {
     "name": "Turkmenistan",
     "code-2": "tm",
     "code-3": "tkm",
-    "timezone": "UTC"
+    "timezone": "Asia/Ashgabat"
   },
   {
     "name": "Tuvalu",
     "code-2": "tv",
     "code-3": "tuv",
-    "timezone": "UTC"
+    "timezone": "Pacific/Funafuti"
   },
   {
     "name": "Uganda",
     "code-2": "ug",
     "code-3": "uga",
-    "timezone": "UTC"
+    "timezone": "Africa/Kampala"
   },
   {
     "name": "Ukraine",
     "code-2": "ua",
     "code-3": "ukr",
-    "timezone": "UTC"
+    "timezone": "Europe/Kiev"
   },
   {
     "name": "United Arab Emirates",
     "code-2": "ae",
     "code-3": "are",
-    "timezone": "UTC"
+    "timezone": "Asia/Dubai"
   },
   {
     "name": "United Kingdom",
     "code-2": "gb",
     "code-3": "gbr",
-    "timezone": "UTC"
+    "timezone": "Europe/London"
   },
   {
-    "name": "United States",
+    "name": "United States of America",
     "code-2": "us",
     "code-3": "usa",
-    "timezone": "UTC"
+    "timezone": "America/New_York"
   },
   {
     "name": "Uruguay",
     "code-2": "uy",
     "code-3": "ury",
-    "timezone": "UTC"
+    "timezone": "America/Montevideo"
   },
   {
     "name": "Uzbekistan",
     "code-2": "uz",
     "code-3": "uzb",
-    "timezone": "UTC"
+    "timezone": "Asia/Tashkent"
   },
   {
     "name": "Vanuatu",
     "code-2": "vu",
     "code-3": "vut",
-    "timezone": "UTC"
+    "timezone": "Pacific/Efate"
   },
   {
     "name": "Vatican City",
@@ -1299,30 +1293,30 @@
     "name": "Venezuela",
     "code-2": "ve",
     "code-3": "ven",
-    "timezone": "UTC"
+    "timezone": "America/Caracas"
   },
   {
     "name": "Vietnam",
     "code-2": "vn",
     "code-3": "vnm",
-    "timezone": "UTC"
+    "timezone": "Asia/Ho_Chi_Minh"
   },
   {
     "name": "Yemen",
     "code-2": "ye",
     "code-3": "yem",
-    "timezone": "UTC"
+    "timezone": "Asia/Aden"
   },
   {
     "name": "Zambia",
     "code-2": "zm",
     "code-3": "zmb",
-    "timezone": "UTC"
+    "timezone": "Africa/Lusaka"
   },
   {
     "name": "Zimbabwe",
     "code-2": "zw",
     "code-3": "zwe",
-    "timezone": "UTC"
+    "timezone": "Africa/Harare"
   }
 ]
