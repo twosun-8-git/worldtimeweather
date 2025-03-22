@@ -36,10 +36,10 @@ export function List({ keyword }: Props) {
       const itemHeight = itemRef.current.offsetHeight;
 
       let itemCount = 2;
-
-      if (window.innerWidth >= BREAKPOINTS.md) {
+      const innerWidth = window.innerWidth;
+      if (innerWidth >= BREAKPOINTS.md) {
         itemCount = 4;
-      } else if (window.innerWidth >= BREAKPOINTS.xl) {
+      } else if (innerWidth >= BREAKPOINTS.xl) {
         itemCount = 6;
       }
 
