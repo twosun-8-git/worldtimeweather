@@ -3,13 +3,13 @@ import { CheckIcon } from "../icons";
 
 type Props = {
   className?: string;
-  isSaved: boolean;
+  isJustSaved: boolean;
   onClick: () => void;
 };
 
-export function SaveButton({ className, isSaved, onClick }: Props) {
+export function SaveButton({ className, isJustSaved, onClick }: Props) {
   const baseStyle =
-    "flex items-center justify-center gap-x-1 rounded py-2 px-2.5 text-white leading-none cursor-pointer";
+    "flex h-7 items-center justify-center gap-x-1 rounded py-2 px-2.5 text-white leading-none cursor-pointer";
 
   return (
     <button
@@ -17,12 +17,12 @@ export function SaveButton({ className, isSaved, onClick }: Props) {
       className={cn(
         baseStyle,
         className,
-        `${isSaved ? "bg-gray-200" : "bg-blue"}`
+        `${isJustSaved ? "bg-gray-200" : "bg-blue"}`
       )}
       onClick={onClick}
     >
-      {isSaved && <CheckIcon size={12} color="#ffffff" />}
-      <span className="text-sm">{isSaved ? "saved" : "save"}</span>
+      {isJustSaved && <CheckIcon size={12} color="#ffffff" />}
+      <span className="text-sm">{isJustSaved ? "saved" : "save"}</span>
     </button>
   );
 }

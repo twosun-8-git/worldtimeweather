@@ -8,7 +8,7 @@ type Props = {
 
 export function RemoveButton({ className, onClick }: Props) {
   const baseStyle =
-    "flex items-center justify-center gap-x-0.5 rounded py-2 px-2.5 bg-red text-white leading-none cursor-pointer";
+    "flex h-7 items-center justify-center gap-x-0.5 rounded py-2 px-2.5 bg-red text-white leading-none cursor-pointer";
 
   return (
     <button
