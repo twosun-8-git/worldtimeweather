@@ -15,13 +15,8 @@ export function LargeTimer() {
 
   const styleContainer = "pc:text-10xl-fix";
 
-  const opacityStyle = timeDigits.length > 0 ? "opaticy-100" : "opacity-10";
-
   return (
-    <time
-      dateTime={dateTimeISO}
-      className={cn(style, styleContainer, opacityStyle)}
-    >
+    <time dateTime={dateTimeISO} className={cn(style, styleContainer)}>
       {digits.map((digit, index) => (
         <span
           key={index}

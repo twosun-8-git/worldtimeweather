@@ -1,6 +1,6 @@
 "use client";
 
-export function useGeoInfo() {
+export function useFetchGeoInfo() {
   const fetchGeoInfo = async () => {
     try {
       const res = await fetch("/api/geoip");

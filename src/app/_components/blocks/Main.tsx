@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { useSetAtom } from "jotai";
 
 import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
-import { useGeoInfo } from "@/app/_hooks/useGeoInfo";
+import { useFetchGeoInfo } from "@/app/_hooks/useFetchGeoInfo";
 import { localDataAtom } from "@/app/_atoms";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function Main({ children }: Props) {
-  const fetchGeoInfo = useGeoInfo();
+  const fetchGeoInfo = useFetchGeoInfo();
   const setLocalData = useSetAtom(localDataAtom);
 
   const [isInitialized, setIsInitialized] = useState(false);
@@ -32,7 +32,6 @@ export function Main({ children }: Props) {
             const fetchedData = await fetchGeoInfo();
 
             if (fetchedData) {
-              // 取得したデータをatomとローカルストレージに保存
               setLocalData(fetchedData);
               localStorage.setItem(
                 LOCAL_STORAGE_KEY_ACTIVE,
