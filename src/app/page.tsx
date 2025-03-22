@@ -1,22 +1,22 @@
 import { Container } from "@/app/_components/layouts";
 import { Main, Modal } from "@/app/_components/blocks";
 import {
-  Ads,
+  Advertisement,
   ActiveCotunryInfo,
   ActiveCotunryTime,
-  CardList,
+  // CardList,
   Search,
 } from "@/app/_components/parts";
 
 export default function Home() {
   return (
     <Container>
-      <Ads />
+      <Advertisement />
       <Main>
         <ActiveCotunryInfo />
         <ActiveCotunryTime />
         <Search />
-        <CardList />
+        {/* <CardList /> */}
       </Main>
       <Modal />
     </Container>

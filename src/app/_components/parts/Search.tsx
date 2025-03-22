@@ -11,7 +11,7 @@ export function Search() {
   return (
     <div className="px-1">
       <SearchInput keyword={keyword} setKeyword={setKeyword} />
-      {keyword.length >= 3 && <List keyword={keyword} />}
+      {keyword.length >= 2 && <List keyword={keyword} />}
     </div>
   );
 }

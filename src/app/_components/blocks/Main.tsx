@@ -27,6 +27,8 @@ export function Main({ children }: Props) {
 
           if (storedData) {
             const parsedData = JSON.parse(storedData);
+            parsedData.code = parsedData.code.toLowerCase();
+
             setLocalData(parsedData);
           } else {
             const fetchedData = await fetchGeoInfo();

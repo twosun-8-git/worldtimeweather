@@ -11,3 +11,10 @@ export type localData = {
   timezone: string;
   timeStamp: Date;
 };
+
+export type countries = {
+  name: string;
+  "code-2": string;
+  "code-3": string;
+  timezone: string;
+};

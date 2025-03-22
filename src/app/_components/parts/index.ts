@@ -1,4 +1,4 @@
-export { Ads } from "./Ads";
+export { Advertisement } from "./Advertisement";
 export { CardList } from "./CardList";
 export { ActiveCotunryInfo } from "./ActiveCountryInfo";
 export { ActiveCotunryTime } from "./ActiveCountryTime";
