@@ -1,3 +1,4 @@
+// src/app/_hooks/useTime.ts の修正版
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -19,9 +20,9 @@ type Options = {
 };
 
 export function useTime(options: Options = {}) {
-  const localData = useAtomValue(activeCountryAtom);
+  const activeCountry = useAtomValue(activeCountryAtom);
 
-  const userTimezone = options.timezone || localData.timezone;
+  const userTimezone = options.timezone || activeCountry.timezone;
   const updateInterval = options.updateInterval || 1000;
   const timeFormat = options.timeFormat || "HH:mm:ss";
   const dateFormat = options.dateFormat || "MMM D";
@@ -35,9 +36,7 @@ export function useTime(options: Options = {}) {
     if (userTimezone) {
       try {
         const now = dayjs().tz(userTimezone);
-
         const timeString = now.format(timeFormat);
-
         const digits = timeString.split("");
 
         setTimeDigits(digits);
@@ -57,7 +56,6 @@ export function useTime(options: Options = {}) {
     updateTime();
 
     const intervalId = setInterval(updateTime, updateInterval);
-
     return () => clearInterval(intervalId);
   }, [updateTime, updateInterval]);
 

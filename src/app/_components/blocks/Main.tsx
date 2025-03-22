@@ -3,9 +3,9 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useSetAtom } from "jotai";
 
-import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
 import { useFetchGeoInfo } from "@/app/_hooks";
 import { activeCountryAtom } from "@/app/_atoms";
+import { getActiveCountryByStorage, saveActiveCountryToStorage } from "@/utils";
 
 type Props = {
   children: ReactNode;
@@ -23,22 +23,18 @@ export function Main({ children }: Props) {
     const initializeGeoData = async () => {
       try {
         if (typeof window !== "undefined") {
-          const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_ACTIVE);
+          const storedData = getActiveCountryByStorage();
 
           if (storedData) {
-            const parsedData = JSON.parse(storedData);
-            parsedData.code = parsedData.code.toLowerCase();
+            storedData.code = storedData.code.toLowerCase();
 
-            setLocalData(parsedData);
+            setLocalData(storedData);
           } else {
             const fetchedData = await fetchGeoInfo();
 
             if (fetchedData) {
               setLocalData(fetchedData);
-              localStorage.setItem(
-                LOCAL_STORAGE_KEY_ACTIVE,
-                JSON.stringify(fetchedData)
-              );
+              saveActiveCountryToStorage(fetchedData);
             }
           }
 

@@ -1,27 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useAtom } from "jotai";
 
 import countriesData from "@/data/countries.json";
+import { activeCountryAtom } from "@/app/_atoms";
 import { ActiveCountryData } from "@/types";
-import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
+import { getActiveCountryByStorage, saveActiveCountryToStorage } from "@/utils";
 
 export function useActiveCountry() {
-  const [activeCountry, setActiveCountry] = useState<ActiveCountryData | null>(
-    null
-  );
+  const [activeCountry, setActiveCountry] = useAtom(activeCountryAtom);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_ACTIVE);
+    const storedData = getActiveCountryByStorage();
     if (storedData) {
       try {
-        const parsedData = JSON.parse(storedData);
-        setActiveCountry(parsedData);
+        setActiveCountry(storedData);
       } catch (e) {
         console.error("Error parsing active country data:", e);
       }
     }
-  }, []);
+  }, [setActiveCountry]);
 
   const findCountryByCode = (code: string) => {
     const normalizedCode = code.toLowerCase();
@@ -48,7 +47,7 @@ export function useActiveCountry() {
 
     const newActiveCountry: ActiveCountryData = {
       country: countryData.name,
-      code: countryData["code-2"].toUpperCase(), // 2文字コードを大文字で統一
+      code: countryData["code-2"].toUpperCase(),
       timezone: countryData.timezone,
       timeStamp: new Date().toISOString(),
     };
@@ -56,10 +55,7 @@ export function useActiveCountry() {
     setActiveCountry(newActiveCountry);
 
     if (typeof window !== "undefined") {
-      localStorage.setItem(
-        LOCAL_STORAGE_KEY_ACTIVE,
-        JSON.stringify(newActiveCountry)
-      );
+      saveActiveCountryToStorage(newActiveCountry);
     }
   };
 

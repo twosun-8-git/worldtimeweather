@@ -1,10 +1,22 @@
 "use client";
 
-import { cn } from "../../../../utils";
+import { useEffect } from "react";
+import { useAtomValue } from "jotai";
+
+import { cn } from "@/utils";
+import { activeCountryAtom } from "@/app/_atoms";
 import { useTime } from "@/app/_hooks";
 
 export function LargeTimer() {
-  const { timeDigits, dateTimeISO } = useTime();
+  const activeCountry = useAtomValue(activeCountryAtom);
+
+  useEffect(() => {
+    console.log(activeCountry);
+  }, [activeCountry]);
+
+  const { timeDigits, dateTimeISO } = useTime({
+    timezone: activeCountry.timezone,
+  });
 
   const digits =
     timeDigits.length > 0
