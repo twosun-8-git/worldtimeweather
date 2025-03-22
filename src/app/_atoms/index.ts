@@ -1,12 +1,12 @@
 import { atom } from "jotai";
 
-import { localData } from "@/types";
+import { ActiveCountryData } from "@/types";
 
 export const visibleModalAtom = atom(false);
 
 export const visibleListAtom = atom(false);
 
-export const localDataAtom = atom<localData>({
+export const activeCountryAtom = atom<ActiveCountryData>({
   country: "",
   code: "",
   timezone: "",

@@ -5,14 +5,14 @@ export type form = {
   website: string;
 };
 
-export type localData = {
+export type ActiveCountryData = {
   country: string;
   code: string;
   timezone: string;
-  timeStamp: Date;
+  timeStamp: Date | string;
 };
 
-export type countries = {
+export type CountryData = {
   name: string;
   "code-2": string;
   "code-3": string;

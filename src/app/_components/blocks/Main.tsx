@@ -5,7 +5,7 @@ import { useSetAtom } from "jotai";
 
 import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
 import { useFetchGeoInfo } from "@/app/_hooks/useFetchGeoInfo";
-import { localDataAtom } from "@/app/_atoms";
+import { activeCountryAtom } from "@/app/_atoms";
 
 type Props = {
   children: ReactNode;
@@ -13,7 +13,7 @@ type Props = {
 
 export function Main({ children }: Props) {
   const fetchGeoInfo = useFetchGeoInfo();
-  const setLocalData = useSetAtom(localDataAtom);
+  const setLocalData = useSetAtom(activeCountryAtom);
 
   const [isInitialized, setIsInitialized] = useState(false);
 

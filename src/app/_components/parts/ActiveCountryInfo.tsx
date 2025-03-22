@@ -3,7 +3,7 @@
 import { useAtomValue } from "jotai";
 
 import { cn } from "../../../utils";
-import { localDataAtom } from "@/app/_atoms";
+import { activeCountryAtom } from "@/app/_atoms";
 
 import {
   CountryTimezone,
@@ -13,7 +13,7 @@ import {
 } from "@/app/_components/widgets";
 
 export function ActiveCotunryInfo() {
-  const localData = useAtomValue(localDataAtom);
+  const localData = useAtomValue(activeCountryAtom);
 
   const { country, code, timezone } = localData;
 

@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 
-import { localDataAtom } from "@/app/_atoms";
+import { activeCountryAtom } from "@/app/_atoms";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -19,7 +19,7 @@ type Options = {
 };
 
 export function useTime(options: Options = {}) {
-  const localData = useAtomValue(localDataAtom);
+  const localData = useAtomValue(activeCountryAtom);
 
   const userTimezone = options.timezone || localData.timezone;
   const updateInterval = options.updateInterval || 1000;
@@ -27,9 +27,9 @@ export function useTime(options: Options = {}) {
   const dateFormat = options.dateFormat || "MMM D";
 
   const [timeDigits, setTimeDigits] = useState<string[]>([]);
-  const [dateTimeISO, setDateTimeISO] = useState<string>("");
-  const [formattedTime, setFormattedTime] = useState<string>("");
-  const [formattedDate, setFormattedDate] = useState<string>("");
+  const [dateTimeISO, setDateTimeISO] = useState("");
+  const [formattedTime, setFormattedTime] = useState("");
+  const [formattedDate, setFormattedDate] = useState("");
 
   const updateTime = useCallback(() => {
     if (userTimezone) {
