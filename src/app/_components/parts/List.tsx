@@ -14,8 +14,10 @@ export function List({ keyword }: Props) {
   const lowerKeyword = keyword.toLowerCase();
 
   const listRef = useRef<HTMLUListElement>(null);
+
   const itemRef = useRef<HTMLLIElement>(null);
-  const [maxHeight, setMaxHeight] = useState<number | null>(null);
+
+  const [maxHeight, setMaxHeight] = useState(48);
 
   const filteredCountries =
     keyword.length >= 2
@@ -62,7 +64,7 @@ export function List({ keyword }: Props) {
     <ul
       ref={listRef}
       className={`divide-y divide-gray-100 border border-gray-100 rounded-b-md bg-white relative overflow-y-auto`}
-      style={{ maxHeight: maxHeight ? `${maxHeight}px` : undefined }}
+      style={{ maxHeight: maxHeight }}
     >
       {filteredCountries.map((country, index) => (
         <ListItem
