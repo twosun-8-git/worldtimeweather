@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { CircleImage } from "@/app/_components/shared";
-import { SaveButton } from "@/app/_components/shared";
+
+import { CircleImage, SaveButton } from "@/app/_components/shared";
 
 type Props = {
   country: string;
@@ -30,7 +30,7 @@ export const ListItem = forwardRef<HTMLLIElement, Props>(
           <span>36°C / 96.8°F</span>
         </div>
         <div className="flex pl-7 pt-2 md:pl-0 md:pt-1 md:ml-auto ">
-          <SaveButton />
+          <SaveButton code={code} />
         </div>
       </li>
     );
