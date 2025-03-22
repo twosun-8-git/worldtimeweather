@@ -19,7 +19,7 @@ export function LargeTimer() {
       : ["0", "0", ":", "0", "0", ":", "0", "0"];
 
   const style =
-    "w-full h-full text-10xl-vw font-black text-center leading-none flex items-center justify-between";
+    "w-full h-full text-10xl-vw font-black text-center leading-none flex items-center justify-between md:mt-2";
 
   const styleContainer = "pc:text-10xl-fix";
 
