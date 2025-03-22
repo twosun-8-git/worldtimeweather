@@ -4,7 +4,7 @@ import { ReactNode, useEffect, useState } from "react";
 import { useSetAtom } from "jotai";
 
 import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
-import { useFetchGeoInfo } from "@/app/_hooks/useFetchGeoInfo";
+import { useFetchGeoInfo } from "@/app/_hooks";
 import { activeCountryAtom } from "@/app/_atoms";
 
 type Props = {

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "../../../../utils";
-import { useTime } from "@/app/_hooks/useTime";
+import { useTime } from "@/app/_hooks";
 
 export function LargeTimer() {
   const { timeDigits, dateTimeISO } = useTime();

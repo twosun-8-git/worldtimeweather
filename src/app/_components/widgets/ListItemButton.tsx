@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { useStoredCountries } from "@/app/_hooks/useStoredCountries";
+import { useActiveCountry, useStoredCountries } from "@/app/_hooks";
 import { SaveButton, RemoveButton } from "@/app/_components/shared";
 
 type Props = {
@@ -18,6 +18,8 @@ export function ListItemButton({ code }: Props) {
 
   const { saveCountry, removeCountry, isCountrySaved } = useStoredCountries();
 
+  const { setActiveCountryByCode } = useActiveCountry();
+
   useEffect(() => {
     setIsSaved(isCountrySaved(code));
   }, [code, isCountrySaved]);
@@ -32,6 +34,8 @@ export function ListItemButton({ code }: Props) {
 
   const handleSave = () => {
     saveCountry(code);
+
+    setActiveCountryByCode(code);
 
     setIsJustSaved(true);
 

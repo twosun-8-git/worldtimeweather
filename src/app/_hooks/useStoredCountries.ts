@@ -1,9 +1,6 @@
 import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
-import { useActiveCountry } from "./useActiveCountry";
 
 export function useStoredCountries(storageKey = LOCAL_STORAGE_KEY_COUNTRIES) {
-  const { setActiveCountryByCode } = useActiveCountry();
-
   const getStoredCountries = (): string[] => {
     if (typeof window === "undefined") return [];
 
@@ -24,7 +21,6 @@ export function useStoredCountries(storageKey = LOCAL_STORAGE_KEY_COUNTRIES) {
 
     if (!countries.includes(code)) {
       countries.push(code);
-      setActiveCountryByCode(code);
       localStorage.setItem(storageKey, JSON.stringify(countries));
     }
   };

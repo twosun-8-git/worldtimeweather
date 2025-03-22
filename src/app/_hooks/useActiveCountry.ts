@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import countriesData from "@/data/countries.json";
-import { ActiveCountryData, CountryData } from "@/types";
+import { ActiveCountryData } from "@/types";
 import { LOCAL_STORAGE_KEY_ACTIVE } from "@/consts";
 
 export function useActiveCountry() {
@@ -23,7 +23,7 @@ export function useActiveCountry() {
     }
   }, []);
 
-  const findCountryByCode = (code: string): CountryData | undefined => {
+  const findCountryByCode = (code: string) => {
     const normalizedCode = code.toLowerCase();
 
     return countriesData.find(
@@ -63,7 +63,7 @@ export function useActiveCountry() {
     }
   };
 
-  const getActiveCountry = (): ActiveCountryData | null => {
+  const getActiveCountry = () => {
     return activeCountry;
   };
 
