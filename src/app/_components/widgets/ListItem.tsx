@@ -1,11 +1,7 @@
 import { forwardRef } from "react";
 
-import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
-import {
-  CircleImage,
-  SaveButton,
-  RemoveButton,
-} from "@/app/_components/shared";
+import { CircleImage } from "@/app/_components/shared";
+import { ListItemButton } from "./ListItemButton";
 
 type Props = {
   country: string;
@@ -14,8 +10,6 @@ type Props = {
 
 export const ListItem = forwardRef<HTMLLIElement, Props>(
   ({ country, code }: Props, ref) => {
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
-
     return (
       <li ref={ref} className="py-2 px-2 md:flex md:items-center md:w-full">
         <figure className="flex items-start gap-x-1 mb-md:items-center md:w-[308px] md:whitespace-nowrap pc:w-[320px] pc:gap-x-1.5">
@@ -36,16 +30,7 @@ export const ListItem = forwardRef<HTMLLIElement, Props>(
           <span>Sunny</span>
           <span>36°C / 96.8°F</span>
         </div>
-        <div className="flex pl-7 pt-2 md:pl-0 md:pt-1 md:ml-auto ">
-          {storedData?.includes(code) ? (
-            <RemoveButton
-              code={code}
-              storageKey={LOCAL_STORAGE_KEY_COUNTRIES}
-            />
-          ) : (
-            <SaveButton code={code} storageKey={LOCAL_STORAGE_KEY_COUNTRIES} />
-          )}
-        </div>
+        <ListItemButton code={code} />
       </li>
     );
   }
