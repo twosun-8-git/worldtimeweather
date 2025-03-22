@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
+import { useStoredCountries } from "@/app/_hooks/useStoredCountries";
 import { SaveButton, RemoveButton } from "@/app/_components/shared";
 
 type Props = {
@@ -11,28 +11,16 @@ type Props = {
 
 export function ListItemButton({ code }: Props) {
   const [isSaved, setIsSaved] = useState(false);
+
   const [isJustSaved, setIsJustSaved] = useState(false);
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const getStoredCountries = (): string[] => {
-    if (typeof window === "undefined") return [];
-
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY_COUNTRIES);
-    if (!storedData) return [];
-
-    try {
-      const countries = JSON.parse(storedData);
-      return Array.isArray(countries) ? countries : [];
-    } catch (e) {
-      console.error("Error parsing stored countries:", e);
-      return [];
-    }
-  };
+  const { saveCountry, removeCountry, isCountrySaved } = useStoredCountries();
 
   useEffect(() => {
-    const countries = getStoredCountries();
-    setIsSaved(countries.includes(code));
-  }, [code]);
+    setIsSaved(isCountrySaved(code));
+  }, [code, isCountrySaved]);
 
   useEffect(() => {
     return () => {
@@ -43,34 +31,24 @@ export function ListItemButton({ code }: Props) {
   }, []);
 
   const handleSave = () => {
-    const countries = getStoredCountries();
-
-    if (!countries.includes(code)) {
-      countries.push(code);
-    }
-
-    localStorage.setItem(
-      LOCAL_STORAGE_KEY_COUNTRIES,
-      JSON.stringify(countries)
-    );
+    saveCountry(code);
 
     setIsJustSaved(true);
 
     timerRef.current = setTimeout(() => {
       setIsJustSaved(false);
-    }, 5000);
+    }, 4000);
 
     setIsSaved(true);
   };
 
   const handleRemove = () => {
-    const countries = getStoredCountries();
-    const updatedCountries = countries.filter((item) => item !== code);
+    removeCountry(code);
 
-    localStorage.setItem(
-      LOCAL_STORAGE_KEY_COUNTRIES,
-      JSON.stringify(updatedCountries)
-    );
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
 
     setIsJustSaved(false);
     setIsSaved(false);

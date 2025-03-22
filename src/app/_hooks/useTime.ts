@@ -12,16 +12,15 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 type Options = {
-  timezone?: string; // オプションでタイムゾーンを指定可能
-  updateInterval?: number; // 更新間隔（ミリ秒）
-  timeFormat?: string; // 時刻のフォーマット
-  dateFormat?: string; // 日付のフォーマット
+  timezone?: string;
+  updateInterval?: number;
+  timeFormat?: string;
+  dateFormat?: string;
 };
 
 export function useTime(options: Options = {}) {
   const localData = useAtomValue(localDataAtom);
 
-  // オプションのタイムゾーンまたはatomのタイムゾーンを使用
   const userTimezone = options.timezone || localData.timezone;
   const updateInterval = options.updateInterval || 1000;
   const timeFormat = options.timeFormat || "HH:mm:ss";

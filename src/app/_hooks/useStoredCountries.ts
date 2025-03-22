@@ -1,0 +1,50 @@
+// hooks/useStoredCountries.ts
+import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
+
+export function useStoredCountries(storageKey = LOCAL_STORAGE_KEY_COUNTRIES) {
+  // 国リストを取得
+  const getStoredCountries = (): string[] => {
+    if (typeof window === "undefined") return [];
+
+    const storedData = localStorage.getItem(storageKey);
+    if (!storedData) return [];
+
+    try {
+      const countries = JSON.parse(storedData);
+      return Array.isArray(countries) ? countries : [];
+    } catch (e) {
+      console.error("Error parsing stored countries:", e);
+      return [];
+    }
+  };
+
+  // 国を保存
+  const saveCountry = (code: string): void => {
+    const countries = getStoredCountries();
+
+    if (!countries.includes(code)) {
+      countries.push(code);
+      localStorage.setItem(storageKey, JSON.stringify(countries));
+    }
+  };
+
+  // 国を削除
+  const removeCountry = (code: string): void => {
+    const countries = getStoredCountries();
+    const updatedCountries = countries.filter((item) => item !== code);
+    localStorage.setItem(storageKey, JSON.stringify(updatedCountries));
+  };
+
+  // 国が保存されているか確認
+  const isCountrySaved = (code: string): boolean => {
+    const countries = getStoredCountries();
+    return countries.includes(code);
+  };
+
+  return {
+    getStoredCountries,
+    saveCountry,
+    removeCountry,
+    isCountrySaved,
+  };
+}
