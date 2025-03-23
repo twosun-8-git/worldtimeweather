@@ -1,13 +1,17 @@
 "use client";
 
-import countriesData from "@/data/countries.json";
-import { CardItem } from "@/app/_components/widgets";
-
 import { useAtomValue } from "jotai";
 
+import countriesData from "@/data/countries.json";
 import { storedCountriesAtom } from "@/app/_atoms";
+import { useActiveCountry, useStoredCountries } from "@/app/_hooks";
+import { CardItem } from "@/app/_components/widgets";
 
 export function CardList() {
+  const { removeCountry } = useStoredCountries();
+
+  const { setActiveCountryByCode } = useActiveCountry();
+
   const storedCountries = useAtomValue(storedCountriesAtom);
 
   if (storedCountries.length < 1) {
@@ -26,7 +30,12 @@ export function CardList() {
       <div className="pt-2 pb-4 sm:pt-4 sm:overflow-x-scroll">
         <div className="flex flex-col gap-2  mb-lg:flex-row mb-lg:flex-wrap sm:gap-3 sm:flex-nowrap">
           {filteredCountries.map((country) => (
-            <CardItem key={country["code-2"]} country={country.name} />
+            <CardItem
+              key={country["code-2"]}
+              country={country.name}
+              onClickCard={() => setActiveCountryByCode(country["code-2"])}
+              onClickCanel={() => removeCountry(country["code-2"])}
+            />
           ))}
         </div>
       </div>
