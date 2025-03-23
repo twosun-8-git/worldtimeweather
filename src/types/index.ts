@@ -14,7 +14,7 @@ export type ActiveCountryData = {
 
 export type CountryData = {
   name: string;
-  "code-2": string;
-  "code-3": string;
+  code2: string;
+  code3: string;
   timezone: string;
 };

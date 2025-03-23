@@ -27,8 +27,8 @@ export function useActiveCountry() {
 
     return countriesData.find(
       (country) =>
-        country["code-2"].toLowerCase() === normalizedCode ||
-        country["code-3"].toLowerCase() === normalizedCode
+        country.code2.toLowerCase() === normalizedCode ||
+        country.code3.toLowerCase() === normalizedCode
     );
   };
 
@@ -47,7 +47,7 @@ export function useActiveCountry() {
 
     const newActiveCountry: ActiveCountryData = {
       country: countryData.name,
-      code: countryData["code-2"],
+      code: countryData.code2,
       timezone: countryData.timezone,
       timeStamp: new Date().toISOString(),
     };

@@ -19,16 +19,13 @@ export function List({ keyword }: Props) {
 
   const [maxHeight, setMaxHeight] = useState(48);
 
-  const filteredCountries =
-    keyword.length >= 2
-      ? countriesData.filter((country) => {
-          return (
-            country.name.includes(lowerKeyword) ||
-            (country["code-2"] && country["code-2"].includes(lowerKeyword)) ||
-            (country["code-3"] && country["code-3"].includes(lowerKeyword))
-          );
-        })
-      : [];
+  const filteredCountries = countriesData.filter((country) => {
+    return (
+      country.name.toLowerCase().includes(lowerKeyword) ||
+      (country.code2 && country.code2.toLowerCase().includes(lowerKeyword)) ||
+      (country.code3 && country.code3.toLowerCase().includes(lowerKeyword))
+    );
+  });
 
   const updateMaxHeight = useCallback(() => {
     if (itemRef.current && filteredCountries.length > 0) {
@@ -65,10 +62,10 @@ export function List({ keyword }: Props) {
     >
       {filteredCountries.map((country, index) => (
         <ListItem
-          key={country["code-3"] || index}
+          key={country.code3 || index}
           ref={index === 0 ? itemRef : null}
           country={country.name}
-          code={country["code-2"] || ""}
+          code={country.code3 || ""}
         />
       ))}
     </ul>

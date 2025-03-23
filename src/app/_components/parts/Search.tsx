@@ -20,19 +20,16 @@ export function Search() {
     setVisibleList(value.length >= 2);
   };
 
-  const handleFocus = () => {
-    if (keyword.length >= 2) {
-      setVisibleList(true);
-    }
-  };
+  const handleFocus = () => setVisibleList(keyword.length >= 2);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (e: MouseEvent) => {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
+        !containerRef.current.contains(e.target as Node)
       ) {
         setVisibleList(false);
+        setKeyword("");
       }
     };
 

@@ -1,1322 +1,1322 @@
 [
   {
     "name": "Abkhazia",
-    "code-2": "ab",
-    "code-3": "abk",
+    "code2": "ab",
+    "code3": "abk",
     "timezone": "UTC"
   },
   {
     "name": "Afghanistan",
-    "code-2": "af",
-    "code-3": "afg",
+    "code2": "af",
+    "code3": "afg",
     "timezone": "Asia/Kabul"
   },
   {
     "name": "Aland Islands",
-    "code-2": "ax",
-    "code-3": "ala",
+    "code2": "ax",
+    "code3": "ala",
     "timezone": "Europe/Mariehamn"
   },
   {
     "name": "Albania",
-    "code-2": "al",
-    "code-3": "alb",
+    "code2": "al",
+    "code3": "alb",
     "timezone": "Europe/Tirane"
   },
   {
     "name": "Algeria",
-    "code-2": "dz",
-    "code-3": "dza",
+    "code2": "dz",
+    "code3": "dza",
     "timezone": "Africa/Algiers"
   },
   {
     "name": "American Samoa",
-    "code-2": "as",
-    "code-3": "asm",
+    "code2": "as",
+    "code3": "asm",
     "timezone": "Pacific/Pago_Pago"
   },
   {
     "name": "Andorra",
-    "code-2": "ad",
-    "code-3": "and",
+    "code2": "ad",
+    "code3": "and",
     "timezone": "Europe/Andorra"
   },
   {
     "name": "Angola",
-    "code-2": "ao",
-    "code-3": "ago",
+    "code2": "ao",
+    "code3": "ago",
     "timezone": "Africa/Luanda"
   },
   {
     "name": "Anguilla",
-    "code-2": "ai",
-    "code-3": "aia",
+    "code2": "ai",
+    "code3": "aia",
     "timezone": "America/Anguilla"
   },
   {
     "name": "Antigua and Barbuda",
-    "code-2": "ag",
-    "code-3": "atg",
+    "code2": "ag",
+    "code3": "atg",
     "timezone": "America/Antigua"
   },
   {
     "name": "Argentina",
-    "code-2": "ar",
-    "code-3": "arg",
+    "code2": "ar",
+    "code3": "arg",
     "timezone": "America/Argentina/Buenos_Aires"
   },
   {
     "name": "Armenia",
-    "code-2": "am",
-    "code-3": "arm",
+    "code2": "am",
+    "code3": "arm",
     "timezone": "Asia/Yerevan"
   },
   {
     "name": "Artsakh (Nagorno-Karabakh)",
-    "code-2": "ax",
-    "code-3": "arc",
+    "code2": "ax",
+    "code3": "arc",
     "timezone": "Asia/Yerevan"
   },
   {
     "name": "Australia",
-    "code-2": "au",
-    "code-3": "aus",
+    "code2": "au",
+    "code3": "aus",
     "timezone": "Australia/Sydney"
   },
   {
     "name": "Austria",
-    "code-2": "at",
-    "code-3": "aut",
+    "code2": "at",
+    "code3": "aut",
     "timezone": "Europe/Vienna"
   },
   {
     "name": "Azerbaijan",
-    "code-2": "az",
-    "code-3": "aze",
+    "code2": "az",
+    "code3": "aze",
     "timezone": "Asia/Baku"
   },
   {
     "name": "Bahamas",
-    "code-2": "bs",
-    "code-3": "bhs",
+    "code2": "bs",
+    "code3": "bhs",
     "timezone": "America/Nassau"
   },
   {
     "name": "Bahrain",
-    "code-2": "bh",
-    "code-3": "bhr",
+    "code2": "bh",
+    "code3": "bhr",
     "timezone": "Asia/Bahrain"
   },
   {
     "name": "Bangladesh",
-    "code-2": "bd",
-    "code-3": "bgd",
+    "code2": "bd",
+    "code3": "bgd",
     "timezone": "Asia/Dhaka"
   },
   {
     "name": "Barbados",
-    "code-2": "bb",
-    "code-3": "brb",
+    "code2": "bb",
+    "code3": "brb",
     "timezone": "America/Barbados"
   },
   {
     "name": "Belarus",
-    "code-2": "by",
-    "code-3": "blr",
+    "code2": "by",
+    "code3": "blr",
     "timezone": "Europe/Minsk"
   },
   {
     "name": "Belgium",
-    "code-2": "be",
-    "code-3": "bel",
+    "code2": "be",
+    "code3": "bel",
     "timezone": "Europe/Brussels"
   },
   {
     "name": "Belize",
-    "code-2": "bz",
-    "code-3": "blz",
+    "code2": "bz",
+    "code3": "blz",
     "timezone": "America/Belize"
   },
   {
     "name": "Benin",
-    "code-2": "bj",
-    "code-3": "ben",
+    "code2": "bj",
+    "code3": "ben",
     "timezone": "Africa/Porto-Novo"
   },
   {
     "name": "Bermuda",
-    "code-2": "bm",
-    "code-3": "bmu",
+    "code2": "bm",
+    "code3": "bmu",
     "timezone": "Atlantic/Bermuda"
   },
   {
     "name": "Bhutan",
-    "code-2": "bt",
-    "code-3": "btn",
+    "code2": "bt",
+    "code3": "btn",
     "timezone": "Asia/Thimphu"
   },
   {
     "name": "Bolivia",
-    "code-2": "bo",
-    "code-3": "bol",
+    "code2": "bo",
+    "code3": "bol",
     "timezone": "America/La_Paz"
   },
   {
     "name": "Bonaire, Saint Eustatius and Saba",
-    "code-2": "bq",
-    "code-3": "bes",
+    "code2": "bq",
+    "code3": "bes",
     "timezone": "America/Kralendijk"
   },
   {
     "name": "Bosnia and Herzegovina",
-    "code-2": "ba",
-    "code-3": "bih",
+    "code2": "ba",
+    "code3": "bih",
     "timezone": "Europe/Sarajevo"
   },
   {
     "name": "Botswana",
-    "code-2": "bw",
-    "code-3": "bwa",
+    "code2": "bw",
+    "code3": "bwa",
     "timezone": "Africa/Gaborone"
   },
   {
     "name": "Brazil",
-    "code-2": "br",
-    "code-3": "bra",
+    "code2": "br",
+    "code3": "bra",
     "timezone": "America/Sao_Paulo"
   },
   {
     "name": "British Indian Ocean Territory",
-    "code-2": "io",
-    "code-3": "iot",
+    "code2": "io",
+    "code3": "iot",
     "timezone": "Indian/Chagos"
   },
   {
     "name": "Brunei",
-    "code-2": "bn",
-    "code-3": "brn",
+    "code2": "bn",
+    "code3": "brn",
     "timezone": "Asia/Brunei"
   },
   {
     "name": "Bulgaria",
-    "code-2": "bg",
-    "code-3": "bgr",
+    "code2": "bg",
+    "code3": "bgr",
     "timezone": "Europe/Sofia"
   },
   {
     "name": "Burkina Faso",
-    "code-2": "bf",
-    "code-3": "bfa",
+    "code2": "bf",
+    "code3": "bfa",
     "timezone": "Africa/Ouagadougou"
   },
   {
     "name": "Burundi",
-    "code-2": "bi",
-    "code-3": "bdi",
+    "code2": "bi",
+    "code3": "bdi",
     "timezone": "Africa/Bujumbura"
   },
   {
     "name": "Cabo Verde",
-    "code-2": "cv",
-    "code-3": "cpv",
+    "code2": "cv",
+    "code3": "cpv",
     "timezone": "Atlantic/Cape_Verde"
   },
   {
     "name": "Cambodia",
-    "code-2": "kh",
-    "code-3": "khm",
+    "code2": "kh",
+    "code3": "khm",
     "timezone": "Asia/Phnom_Penh"
   },
   {
     "name": "Cameroon",
-    "code-2": "cm",
-    "code-3": "cmr",
+    "code2": "cm",
+    "code3": "cmr",
     "timezone": "Africa/Douala"
   },
   {
     "name": "Canada",
-    "code-2": "ca",
-    "code-3": "can",
+    "code2": "ca",
+    "code3": "can",
     "timezone": "America/Toronto"
   },
   {
     "name": "Cayman Islands",
-    "code-2": "ky",
-    "code-3": "cym",
+    "code2": "ky",
+    "code3": "cym",
     "timezone": "America/Cayman"
   },
   {
     "name": "Central African Republic",
-    "code-2": "cf",
-    "code-3": "caf",
+    "code2": "cf",
+    "code3": "caf",
     "timezone": "Africa/Bangui"
   },
   {
     "name": "Chad",
-    "code-2": "td",
-    "code-3": "tcd",
+    "code2": "td",
+    "code3": "tcd",
     "timezone": "Africa/Ndjamena"
   },
   {
     "name": "Chile",
-    "code-2": "cl",
-    "code-3": "chl",
+    "code2": "cl",
+    "code3": "chl",
     "timezone": "America/Santiago"
   },
   {
     "name": "China",
-    "code-2": "cn",
-    "code-3": "chn",
+    "code2": "cn",
+    "code3": "chn",
     "timezone": "Asia/Shanghai"
   },
   {
     "name": "Christmas Island",
-    "code-2": "cx",
-    "code-3": "cxr",
+    "code2": "cx",
+    "code3": "cxr",
     "timezone": "Indian/Christmas"
   },
   {
     "name": "Cocos Islands",
-    "code-2": "cc",
-    "code-3": "cck",
+    "code2": "cc",
+    "code3": "cck",
     "timezone": "Indian/Cocos"
   },
   {
     "name": "Colombia",
-    "code-2": "co",
-    "code-3": "col",
+    "code2": "co",
+    "code3": "col",
     "timezone": "America/Bogota"
   },
   {
     "name": "Comoros",
-    "code-2": "km",
-    "code-3": "com",
+    "code2": "km",
+    "code3": "com",
     "timezone": "Indian/Comoro"
   },
   {
     "name": "Congo (Congo-Brazzaville)",
-    "code-2": "cg",
-    "code-3": "cog",
+    "code2": "cg",
+    "code3": "cog",
     "timezone": "Africa/Brazzaville"
   },
   {
     "name": "Congo (Congo-Kinshasa)",
-    "code-2": "cd",
-    "code-3": "cod",
+    "code2": "cd",
+    "code3": "cod",
     "timezone": "Africa/Kinshasa"
   },
   {
     "name": "Costa Rica",
-    "code-2": "cr",
-    "code-3": "cri",
+    "code2": "cr",
+    "code3": "cri",
     "timezone": "America/Costa_Rica"
   },
   {
     "name": "Cote d'Ivoire",
-    "code-2": "ci",
-    "code-3": "civ",
+    "code2": "ci",
+    "code3": "civ",
     "timezone": "Africa/Abidjan"
   },
   {
     "name": "Croatia",
-    "code-2": "hr",
-    "code-3": "hrv",
+    "code2": "hr",
+    "code3": "hrv",
     "timezone": "Europe/Zagreb"
   },
   {
     "name": "Cuba",
-    "code-2": "cu",
-    "code-3": "cub",
+    "code2": "cu",
+    "code3": "cub",
     "timezone": "America/Havana"
   },
   {
     "name": "Curacao",
-    "code-2": "cw",
-    "code-3": "cuw",
+    "code2": "cw",
+    "code3": "cuw",
     "timezone": "America/Curacao"
   },
   {
     "name": "Cyprus",
-    "code-2": "cy",
-    "code-3": "cyp",
+    "code2": "cy",
+    "code3": "cyp",
     "timezone": "Asia/Nicosia"
   },
   {
     "name": "Czechia",
-    "code-2": "cz",
-    "code-3": "cze",
+    "code2": "cz",
+    "code3": "cze",
     "timezone": "Europe/Prague"
   },
   {
     "name": "Denmark",
-    "code-2": "dk",
-    "code-3": "dnk",
+    "code2": "dk",
+    "code3": "dnk",
     "timezone": "Europe/Copenhagen"
   },
   {
     "name": "Djibouti",
-    "code-2": "dj",
-    "code-3": "dji",
+    "code2": "dj",
+    "code3": "dji",
     "timezone": "Africa/Djibouti"
   },
   {
     "name": "Dominica",
-    "code-2": "dm",
-    "code-3": "dma",
+    "code2": "dm",
+    "code3": "dma",
     "timezone": "America/Dominica"
   },
   {
     "name": "Dominican Republic",
-    "code-2": "do",
-    "code-3": "dom",
+    "code2": "do",
+    "code3": "dom",
     "timezone": "America/Santo_Domingo"
   },
   {
     "name": "Donetsk People's Republic",
-    "code-2": "",
-    "code-3": "dnr",
+    "code2": "",
+    "code3": "dnr",
     "timezone": "Europe/Simferopol"
   },
   {
     "name": "Ecuador",
-    "code-2": "ec",
-    "code-3": "ecu",
+    "code2": "ec",
+    "code3": "ecu",
     "timezone": "America/Guayaquil"
   },
   {
     "name": "Egypt",
-    "code-2": "eg",
-    "code-3": "egy",
+    "code2": "eg",
+    "code3": "egy",
     "timezone": "Africa/Cairo"
   },
   {
     "name": "El Salvador",
-    "code-2": "sv",
-    "code-3": "slv",
+    "code2": "sv",
+    "code3": "slv",
     "timezone": "America/El_Salvador"
   },
   {
     "name": "Equatorial Guinea",
-    "code-2": "gq",
-    "code-3": "gnq",
+    "code2": "gq",
+    "code3": "gnq",
     "timezone": "Africa/Malabo"
   },
   {
     "name": "Eritrea",
-    "code-2": "er",
-    "code-3": "eri",
+    "code2": "er",
+    "code3": "eri",
     "timezone": "Africa/Asmara"
   },
   {
     "name": "Estonia",
-    "code-2": "ee",
-    "code-3": "est",
+    "code2": "ee",
+    "code3": "est",
     "timezone": "Europe/Tallinn"
   },
   {
     "name": "Eswatini",
-    "code-2": "sz",
-    "code-3": "swz",
+    "code2": "sz",
+    "code3": "swz",
     "timezone": "Africa/Mbabane"
   },
   {
     "name": "Ethiopia",
-    "code-2": "et",
-    "code-3": "eth",
+    "code2": "et",
+    "code3": "eth",
     "timezone": "Africa/Addis_Ababa"
   },
   {
     "name": "Fiji",
-    "code-2": "fj",
-    "code-3": "fji",
+    "code2": "fj",
+    "code3": "fji",
     "timezone": "Pacific/Fiji"
   },
   {
     "name": "Finland",
-    "code-2": "fi",
-    "code-3": "fin",
+    "code2": "fi",
+    "code3": "fin",
     "timezone": "Europe/Helsinki"
   },
   {
     "name": "France",
-    "code-2": "fr",
-    "code-3": "fra",
+    "code2": "fr",
+    "code3": "fra",
     "timezone": "Europe/Paris"
   },
   {
     "name": "Gabon",
-    "code-2": "ga",
-    "code-3": "gab",
+    "code2": "ga",
+    "code3": "gab",
     "timezone": "Africa/Libreville"
   },
   {
     "name": "Gambia",
-    "code-2": "gm",
-    "code-3": "gmb",
+    "code2": "gm",
+    "code3": "gmb",
     "timezone": "Africa/Banjul"
   },
   {
     "name": "Georgia",
-    "code-2": "ge",
-    "code-3": "geo",
+    "code2": "ge",
+    "code3": "geo",
     "timezone": "Asia/Tbilisi"
   },
   {
     "name": "Germany",
-    "code-2": "de",
-    "code-3": "deu",
+    "code2": "de",
+    "code3": "deu",
     "timezone": "Europe/Berlin"
   },
   {
     "name": "Ghana",
-    "code-2": "gh",
-    "code-3": "gha",
+    "code2": "gh",
+    "code3": "gha",
     "timezone": "Africa/Accra"
   },
   {
     "name": "Gibraltar",
-    "code-2": "gi",
-    "code-3": "gib",
+    "code2": "gi",
+    "code3": "gib",
     "timezone": "Europe/Gibraltar"
   },
   {
     "name": "Greece",
-    "code-2": "gr",
-    "code-3": "grc",
+    "code2": "gr",
+    "code3": "grc",
     "timezone": "Europe/Athens"
   },
   {
     "name": "Grenada",
-    "code-2": "gd",
-    "code-3": "grd",
+    "code2": "gd",
+    "code3": "grd",
     "timezone": "America/Grenada"
   },
   {
     "name": "Guatemala",
-    "code-2": "gt",
-    "code-3": "gtm",
+    "code2": "gt",
+    "code3": "gtm",
     "timezone": "America/Guatemala"
   },
   {
     "name": "Guinea",
-    "code-2": "gn",
-    "code-3": "gin",
+    "code2": "gn",
+    "code3": "gin",
     "timezone": "Africa/Conakry"
   },
   {
     "name": "Guinea-Bissau",
-    "code-2": "gw",
-    "code-3": "gnb",
+    "code2": "gw",
+    "code3": "gnb",
     "timezone": "Africa/Bissau"
   },
   {
     "name": "Guyana",
-    "code-2": "gy",
-    "code-3": "guy",
+    "code2": "gy",
+    "code3": "guy",
     "timezone": "America/Guyana"
   },
   {
     "name": "Haiti",
-    "code-2": "ht",
-    "code-3": "hti",
+    "code2": "ht",
+    "code3": "hti",
     "timezone": "America/Port-au-Prince"
   },
   {
     "name": "Holy See",
-    "code-2": "va",
-    "code-3": "vat",
+    "code2": "va",
+    "code3": "vat",
     "timezone": "Europe/Vatican"
   },
   {
     "name": "Hong Kong",
-    "code-2": "hk",
-    "code-3": "hkg",
+    "code2": "hk",
+    "code3": "hkg",
     "timezone": "Asia/Hong_Kong"
   },
   {
     "name": "Honduras",
-    "code-2": "hn",
-    "code-3": "hnd",
+    "code2": "hn",
+    "code3": "hnd",
     "timezone": "America/Tegucigalpa"
   },
   {
     "name": "Hungary",
-    "code-2": "hu",
-    "code-3": "hun",
+    "code2": "hu",
+    "code3": "hun",
     "timezone": "Europe/Budapest"
   },
   {
     "name": "Iceland",
-    "code-2": "is",
-    "code-3": "isl",
+    "code2": "is",
+    "code3": "isl",
     "timezone": "Atlantic/Reykjavik"
   },
   {
     "name": "India",
-    "code-2": "in",
-    "code-3": "ind",
+    "code2": "in",
+    "code3": "ind",
     "timezone": "Asia/Kolkata"
   },
   {
     "name": "Indonesia",
-    "code-2": "id",
-    "code-3": "idn",
+    "code2": "id",
+    "code3": "idn",
     "timezone": "Asia/Jakarta"
   },
   {
     "name": "Iran",
-    "code-2": "ir",
-    "code-3": "irn",
+    "code2": "ir",
+    "code3": "irn",
     "timezone": "Asia/Tehran"
   },
   {
     "name": "Iraq",
-    "code-2": "iq",
-    "code-3": "irq",
+    "code2": "iq",
+    "code3": "irq",
     "timezone": "Asia/Baghdad"
   },
   {
     "name": "Ireland",
-    "code-2": "ie",
-    "code-3": "irl",
+    "code2": "ie",
+    "code3": "irl",
     "timezone": "Europe/Dublin"
   },
   {
     "name": "Israel",
-    "code-2": "il",
-    "code-3": "isr",
+    "code2": "il",
+    "code3": "isr",
     "timezone": "Asia/Jerusalem"
   },
   {
     "name": "Italy",
-    "code-2": "it",
-    "code-3": "ita",
+    "code2": "it",
+    "code3": "ita",
     "timezone": "Europe/Rome"
   },
   {
     "name": "Jamaica",
-    "code-2": "jm",
-    "code-3": "jam",
+    "code2": "jm",
+    "code3": "jam",
     "timezone": "America/Jamaica"
   },
   {
     "name": "Japan",
-    "code-2": "jp",
-    "code-3": "jpn",
+    "code2": "jp",
+    "code3": "jpn",
     "timezone": "Asia/Tokyo"
   },
   {
     "name": "Jordan",
-    "code-2": "jo",
-    "code-3": "jor",
+    "code2": "jo",
+    "code3": "jor",
     "timezone": "Asia/Amman"
   },
   {
     "name": "Kazakhstan",
-    "code-2": "kz",
-    "code-3": "kaz",
+    "code2": "kz",
+    "code3": "kaz",
     "timezone": "Asia/Almaty"
   },
   {
     "name": "Kenya",
-    "code-2": "ke",
-    "code-3": "ken",
+    "code2": "ke",
+    "code3": "ken",
     "timezone": "Africa/Nairobi"
   },
   {
     "name": "Kiribati",
-    "code-2": "ki",
-    "code-3": "kir",
+    "code2": "ki",
+    "code3": "kir",
     "timezone": "Pacific/Tarawa"
   },
   {
     "name": "Kosovo",
-    "code-2": "xk",
-    "code-3": "xkX",
+    "code2": "xk",
+    "code3": "xkX",
     "timezone": "Europe/Belgrade"
   },
   {
     "name": "Kuwait",
-    "code-2": "kw",
-    "code-3": "kwt",
+    "code2": "kw",
+    "code3": "kwt",
     "timezone": "Asia/Kuwait"
   },
   {
     "name": "Kyrgyzstan",
-    "code-2": "kg",
-    "code-3": "kgz",
+    "code2": "kg",
+    "code3": "kgz",
     "timezone": "Asia/Bishkek"
   },
   {
     "name": "Laos",
-    "code-2": "la",
-    "code-3": "lao",
+    "code2": "la",
+    "code3": "lao",
     "timezone": "Asia/Vientiane"
   },
   {
     "name": "Latvia",
-    "code-2": "lv",
-    "code-3": "lva",
+    "code2": "lv",
+    "code3": "lva",
     "timezone": "Europe/Riga"
   },
   {
     "name": "Lebanon",
-    "code-2": "lb",
-    "code-3": "lbn",
+    "code2": "lb",
+    "code3": "lbn",
     "timezone": "Asia/Beirut"
   },
   {
     "name": "Lesotho",
-    "code-2": "ls",
-    "code-3": "lso",
+    "code2": "ls",
+    "code3": "lso",
     "timezone": "Africa/Maseru"
   },
   {
     "name": "Liberia",
-    "code-2": "lr",
-    "code-3": "lbr",
+    "code2": "lr",
+    "code3": "lbr",
     "timezone": "Africa/Monrovia"
   },
   {
     "name": "Libya",
-    "code-2": "ly",
-    "code-3": "lby",
+    "code2": "ly",
+    "code3": "lby",
     "timezone": "Africa/Tripoli"
   },
   {
     "name": "Liechtenstein",
-    "code-2": "li",
-    "code-3": "lie",
+    "code2": "li",
+    "code3": "lie",
     "timezone": "Europe/Vaduz"
   },
   {
     "name": "Lithuania",
-    "code-2": "lt",
-    "code-3": "ltu",
+    "code2": "lt",
+    "code3": "ltu",
     "timezone": "Europe/Vilnius"
   },
   {
     "name": "Luhansk People's Republic",
-    "code-2": "",
-    "code-3": "lnr",
+    "code2": "",
+    "code3": "lnr",
     "timezone": "Europe/Simferopol"
   },
   {
     "name": "Luxembourg",
-    "code-2": "lu",
-    "code-3": "lux",
+    "code2": "lu",
+    "code3": "lux",
     "timezone": "Europe/Luxembourg"
   },
   {
     "name": "Madagascar",
-    "code-2": "mg",
-    "code-3": "mdg",
+    "code2": "mg",
+    "code3": "mdg",
     "timezone": "Indian/Antananarivo"
   },
   {
     "name": "Malawi",
-    "code-2": "mw",
-    "code-3": "mwi",
+    "code2": "mw",
+    "code3": "mwi",
     "timezone": "Africa/Blantyre"
   },
   {
     "name": "Malaysia",
-    "code-2": "my",
-    "code-3": "mys",
+    "code2": "my",
+    "code3": "mys",
     "timezone": "Asia/Kuala_Lumpur"
   },
   {
     "name": "Maldives",
-    "code-2": "mv",
-    "code-3": "mdv",
+    "code2": "mv",
+    "code3": "mdv",
     "timezone": "Indian/Maldives"
   },
   {
     "name": "Mali",
-    "code-2": "ml",
-    "code-3": "mli",
+    "code2": "ml",
+    "code3": "mli",
     "timezone": "Africa/Bamako"
   },
   {
     "name": "Malta",
-    "code-2": "mt",
-    "code-3": "mlt",
+    "code2": "mt",
+    "code3": "mlt",
     "timezone": "Europe/Malta"
   },
   {
     "name": "Marshall Islands",
-    "code-2": "mh",
-    "code-3": "mhl",
+    "code2": "mh",
+    "code3": "mhl",
     "timezone": "Pacific/Majuro"
   },
   {
     "name": "Mauritania",
-    "code-2": "mr",
-    "code-3": "mrt",
+    "code2": "mr",
+    "code3": "mrt",
     "timezone": "Africa/Nouakchott"
   },
   {
     "name": "Mauritius",
-    "code-2": "mu",
-    "code-3": "mus",
+    "code2": "mu",
+    "code3": "mus",
     "timezone": "Indian/Mauritius"
   },
   {
     "name": "Mexico",
-    "code-2": "mx",
-    "code-3": "mex",
+    "code2": "mx",
+    "code3": "mex",
     "timezone": "America/Mexico_City"
   },
   {
     "name": "Micronesia",
-    "code-2": "fm",
-    "code-3": "fsm",
+    "code2": "fm",
+    "code3": "fsm",
     "timezone": "Pacific/Pohnpei"
   },
   {
     "name": "Moldova",
-    "code-2": "md",
-    "code-3": "mda",
+    "code2": "md",
+    "code3": "mda",
     "timezone": "Europe/Chisinau"
   },
   {
     "name": "Monaco",
-    "code-2": "mc",
-    "code-3": "mco",
+    "code2": "mc",
+    "code3": "mco",
     "timezone": "Europe/Monaco"
   },
   {
     "name": "Mongolia",
-    "code-2": "mn",
-    "code-3": "mng",
+    "code2": "mn",
+    "code3": "mng",
     "timezone": "Asia/Ulaanbaatar"
   },
   {
     "name": "Montenegro",
-    "code-2": "me",
-    "code-3": "mne",
+    "code2": "me",
+    "code3": "mne",
     "timezone": "Europe/Podgorica"
   },
   {
     "name": "Morocco",
-    "code-2": "ma",
-    "code-3": "mar",
+    "code2": "ma",
+    "code3": "mar",
     "timezone": "Africa/Casablanca"
   },
   {
     "name": "Mozambique",
-    "code-2": "mz",
-    "code-3": "moz",
+    "code2": "mz",
+    "code3": "moz",
     "timezone": "Africa/Maputo"
   },
   {
     "name": "Myanmar",
-    "code-2": "mm",
-    "code-3": "mmr",
+    "code2": "mm",
+    "code3": "mmr",
     "timezone": "Asia/Yangon"
   },
   {
     "name": "Namibia",
-    "code-2": "na",
-    "code-3": "nam",
+    "code2": "na",
+    "code3": "nam",
     "timezone": "Africa/Windhoek"
   },
   {
     "name": "Nauru",
-    "code-2": "nr",
-    "code-3": "nru",
+    "code2": "nr",
+    "code3": "nru",
     "timezone": "Pacific/Nauru"
   },
   {
     "name": "Nepal",
-    "code-2": "np",
-    "code-3": "npl",
+    "code2": "np",
+    "code3": "npl",
     "timezone": "Asia/Kathmandu"
   },
   {
     "name": "Netherlands",
-    "code-2": "nl",
-    "code-3": "nld",
+    "code2": "nl",
+    "code3": "nld",
     "timezone": "Europe/Amsterdam"
   },
   {
     "name": "New Zealand",
-    "code-2": "nz",
-    "code-3": "nzl",
+    "code2": "nz",
+    "code3": "nzl",
     "timezone": "Europe/Auckland"
   },
   {
     "name": "Nicaragua",
-    "code-2": "ni",
-    "code-3": "nic",
+    "code2": "ni",
+    "code3": "nic",
     "timezone": "America/Managua"
   },
   {
     "name": "Niger",
-    "code-2": "ne",
-    "code-3": "ner",
+    "code2": "ne",
+    "code3": "ner",
     "timezone": "Africa/Niamey"
   },
   {
     "name": "Nigeria",
-    "code-2": "ng",
-    "code-3": "nga",
+    "code2": "ng",
+    "code3": "nga",
     "timezone": "Africa/Lagos"
   },
   {
     "name": "North Korea",
-    "code-2": "kp",
-    "code-3": "prk",
+    "code2": "kp",
+    "code3": "prk",
     "timezone": "Asia/Pyongyang"
   },
   {
     "name": "North Macedonia",
-    "code-2": "mk",
-    "code-3": "mkd",
+    "code2": "mk",
+    "code3": "mkd",
     "timezone": "Europe/Skopje"
   },
   {
     "name": "Northern Cyprus",
-    "code-2": "cy",
-    "code-3": "cyp-n",
+    "code2": "cy",
+    "code3": "cyp-n",
     "timezone": "Asia/Nicosia"
   },
   {
     "name": "Norway",
-    "code-2": "no",
-    "code-3": "nor",
+    "code2": "no",
+    "code3": "nor",
     "timezone": "Europe/Oslo"
   },
   {
     "name": "Oman",
-    "code-2": "om",
-    "code-3": "omn",
+    "code2": "om",
+    "code3": "omn",
     "timezone": "Asia/Muscat"
   },
   {
     "name": "Pakistan",
-    "code-2": "pk",
-    "code-3": "pak",
+    "code2": "pk",
+    "code3": "pak",
     "timezone": "Asia/Karachi"
   },
   {
     "name": "Palau",
-    "code-2": "pw",
-    "code-3": "plw",
+    "code2": "pw",
+    "code3": "plw",
     "timezone": "Pacific/Palau"
   },
   {
     "name": "Palestine",
-    "code-2": "ps",
-    "code-3": "pse",
+    "code2": "ps",
+    "code3": "pse",
     "timezone": "Asia/Gaza"
   },
   {
     "name": "Panama",
-    "code-2": "pa",
-    "code-3": "pan",
+    "code2": "pa",
+    "code3": "pan",
     "timezone": "America/Panama"
   },
   {
     "name": "Papua New Guinea",
-    "code-2": "pg",
-    "code-3": "png",
+    "code2": "pg",
+    "code3": "png",
     "timezone": "Pacific/Port_Moresby"
   },
   {
     "name": "Paraguay",
-    "code-2": "py",
-    "code-3": "pry",
+    "code2": "py",
+    "code3": "pry",
     "timezone": "America/Asuncion"
   },
   {
     "name": "Peru",
-    "code-2": "pe",
-    "code-3": "per",
+    "code2": "pe",
+    "code3": "per",
     "timezone": "America/Lima"
   },
   {
     "name": "Philippines",
-    "code-2": "ph",
-    "code-3": "phl",
+    "code2": "ph",
+    "code3": "phl",
     "timezone": "Asia/Manila"
   },
   {
     "name": "Poland",
-    "code-2": "pl",
-    "code-3": "pol",
+    "code2": "pl",
+    "code3": "pol",
     "timezone": "Europe/Warsaw"
   },
   {
     "name": "Portugal",
-    "code-2": "pt",
-    "code-3": "prt",
+    "code2": "pt",
+    "code3": "prt",
     "timezone": "Europe/Lisbon"
   },
   {
     "name": "Qatar",
-    "code-2": "qa",
-    "code-3": "qat",
+    "code2": "qa",
+    "code3": "qat",
     "timezone": "Asia/Qatar"
   },
   {
     "name": "Taiwan",
-    "code-2": "tw",
-    "code-3": "twn",
+    "code2": "tw",
+    "code3": "twn",
     "timezone": "Asia/Taipei"
   },
   {
     "name": "Romania",
-    "code-2": "ro",
-    "code-3": "rou",
+    "code2": "ro",
+    "code3": "rou",
     "timezone": "Europe/Bucharest"
   },
   {
     "name": "Russia",
-    "code-2": "ru",
-    "code-3": "rus",
+    "code2": "ru",
+    "code3": "rus",
     "timezone": "Europe/Moscow"
   },
   {
     "name": "Rwanda",
-    "code-2": "rw",
-    "code-3": "rwa",
+    "code2": "rw",
+    "code3": "rwa",
     "timezone": "Africa/Kigali"
   },
   {
     "name": "Sahrawi Arab Democratic Republic",
-    "code-2": "eh",
-    "code-3": "esh",
+    "code2": "eh",
+    "code3": "esh",
     "timezone": "Africa/El_Aaiun"
   },
   {
     "name": "Saint Kitts and Nevis",
-    "code-2": "kn",
-    "code-3": "kna",
+    "code2": "kn",
+    "code3": "kna",
     "timezone": "America/St_Kitts"
   },
   {
     "name": "Saint Lucia",
-    "code-2": "lc",
-    "code-3": "lca",
+    "code2": "lc",
+    "code3": "lca",
     "timezone": "America/St_Lucia"
   },
   {
     "name": "Saint Vincent and the Grenadines",
-    "code-2": "vc",
-    "code-3": "vct",
+    "code2": "vc",
+    "code3": "vct",
     "timezone": "America/St_Vincent"
   },
   {
     "name": "Samoa",
-    "code-2": "ws",
-    "code-3": "wsm",
+    "code2": "ws",
+    "code3": "wsm",
     "timezone": "Pacific/Apia"
   },
   {
     "name": "San Marino",
-    "code-2": "sm",
-    "code-3": "smr",
+    "code2": "sm",
+    "code3": "smr",
     "timezone": "Europe/San_Marino"
   },
   {
     "name": "Sao Tome and Principe",
-    "code-2": "st",
-    "code-3": "stp",
+    "code2": "st",
+    "code3": "stp",
     "timezone": "Africa/Sao_Tome"
   },
   {
     "name": "Saudi Arabia",
-    "code-2": "sa",
-    "code-3": "sau",
+    "code2": "sa",
+    "code3": "sau",
     "timezone": "Asia/Riyadh"
   },
   {
     "name": "Senegal",
-    "code-2": "sn",
-    "code-3": "sen",
+    "code2": "sn",
+    "code3": "sen",
     "timezone": "Africa/Dakar"
   },
   {
     "name": "Serbia",
-    "code-2": "rs",
-    "code-3": "srb",
+    "code2": "rs",
+    "code3": "srb",
     "timezone": "Europe/Belgrade"
   },
   {
     "name": "Seychelles",
-    "code-2": "sc",
-    "code-3": "syc",
+    "code2": "sc",
+    "code3": "syc",
     "timezone": "Indian/Mahe"
   },
   {
     "name": "Sierra Leone",
-    "code-2": "sl",
-    "code-3": "sle",
+    "code2": "sl",
+    "code3": "sle",
     "timezone": "Africa/Freetown"
   },
   {
     "name": "Singapore",
-    "code-2": "sg",
-    "code-3": "sgp",
+    "code2": "sg",
+    "code3": "sgp",
     "timezone": "Asia/Singapore"
   },
   {
     "name": "Slovakia",
-    "code-2": "sk",
-    "code-3": "svk",
+    "code2": "sk",
+    "code3": "svk",
     "timezone": "Europe/Bratislava"
   },
   {
     "name": "Slovenia",
-    "code-2": "si",
-    "code-3": "svn",
+    "code2": "si",
+    "code3": "svn",
     "timezone": "Europe/Ljubljana"
   },
   {
     "name": "Solomon Islands",
-    "code-2": "sb",
-    "code-3": "slb",
+    "code2": "sb",
+    "code3": "slb",
     "timezone": "Pacific/Guadalcanal"
   },
   {
     "name": "Somalia",
-    "code-2": "so",
-    "code-3": "som",
+    "code2": "so",
+    "code3": "som",
     "timezone": "Pacific/Guadalcanal"
   },
   {
     "name": "Somaliland",
-    "code-2": "so",
-    "code-3": "som-l",
+    "code2": "so",
+    "code3": "som-l",
     "timezone": "Africa/Mogadishu"
   },
   {
     "name": "South Africa",
-    "code-2": "za",
-    "code-3": "zaf",
+    "code2": "za",
+    "code3": "zaf",
     "timezone": "Africa/Johannesburg"
   },
   {
     "name": "South Korea",
-    "code-2": "kr",
-    "code-3": "kor",
+    "code2": "kr",
+    "code3": "kor",
     "timezone": "Asia/Seoul"
   },
   {
     "name": "South Ossetia",
-    "code-2": "",
-    "code-3": "ossetia",
+    "code2": "",
+    "code3": "ossetia",
     "timezone": "Asia/Tbilisi"
   },
   {
     "name": "South Sudan",
-    "code-2": "ss",
-    "code-3": "ssd",
+    "code2": "ss",
+    "code3": "ssd",
     "timezone": "Africa/Juba"
   },
   {
     "name": "Spain",
-    "code-2": "es",
-    "code-3": "esp",
+    "code2": "es",
+    "code3": "esp",
     "timezone": "Europe/Madrid"
   },
   {
     "name": "Sri Lanka",
-    "code-2": "lk",
-    "code-3": "lka",
+    "code2": "lk",
+    "code3": "lka",
     "timezone": "Asia/Colombo"
   },
   {
     "name": "State of Palestine",
-    "code-2": "ps",
-    "code-3": "pse",
+    "code2": "ps",
+    "code3": "pse",
     "timezone": "Asia/Gaza"
   },
   {
     "name": "Sudan",
-    "code-2": "sd",
-    "code-3": "sdn",
+    "code2": "sd",
+    "code3": "sdn",
     "timezone": "Africa/Khartoum"
   },
   {
     "name": "Suriname",
-    "code-2": "sr",
-    "code-3": "sur",
+    "code2": "sr",
+    "code3": "sur",
     "timezone": "America/Paramaribo"
   },
   {
     "name": "Sweden",
-    "code-2": "se",
-    "code-3": "swe",
+    "code2": "se",
+    "code3": "swe",
     "timezone": "Europe/Stockholm"
   },
   {
     "name": "Switzerland",
-    "code-2": "ch",
-    "code-3": "che",
+    "code2": "ch",
+    "code3": "che",
     "timezone": "Europe/Zurich"
   },
   {
     "name": "Syria",
-    "code-2": "sy",
-    "code-3": "syr",
+    "code2": "sy",
+    "code3": "syr",
     "timezone": "Asia/Damascus"
   },
   {
     "name": "Tajikistan",
-    "code-2": "tj",
-    "code-3": "tjk",
+    "code2": "tj",
+    "code3": "tjk",
     "timezone": "Asia/Dushanbe"
   },
   {
     "name": "Tanzania",
-    "code-2": "tz",
-    "code-3": "tza",
+    "code2": "tz",
+    "code3": "tza",
     "timezone": "Africa/Dar_es_Salaam"
   },
   {
     "name": "Thailand",
-    "code-2": "th",
-    "code-3": "tha",
+    "code2": "th",
+    "code3": "tha",
     "timezone": "Asia/Bangkok"
   },
   {
     "name": "Timor-Leste",
-    "code-2": "tl",
-    "code-3": "tls",
+    "code2": "tl",
+    "code3": "tls",
     "timezone": "Asia/Dili"
   },
   {
     "name": "Togo",
-    "code-2": "tg",
-    "code-3": "tgo",
+    "code2": "tg",
+    "code3": "tgo",
     "timezone": "Africa/Lome"
   },
   {
     "name": "Tonga",
-    "code-2": "to",
-    "code-3": "ton",
+    "code2": "to",
+    "code3": "ton",
     "timezone": "Pacific/Tongatapu"
   },
   {
     "name": "Transnistria",
-    "code-2": "md",
-    "code-3": "pmd",
+    "code2": "md",
+    "code3": "pmd",
     "timezone": "Europe/Chisinau"
   },
   {
     "name": "Trinidad and Tobago",
-    "code-2": "tt",
-    "code-3": "tto",
+    "code2": "tt",
+    "code3": "tto",
     "timezone": "America/Port_of_Spain"
   },
   {
     "name": "Tunisia",
-    "code-2": "tn",
-    "code-3": "tun",
+    "code2": "tn",
+    "code3": "tun",
     "timezone": "Africa/Tunis"
   },
   {
     "name": "Turkey",
-    "code-2": "tr",
-    "code-3": "tur",
+    "code2": "tr",
+    "code3": "tur",
     "timezone": "Europe/Istanbul"
   },
   {
     "name": "Turkmenistan",
-    "code-2": "tm",
-    "code-3": "tkm",
+    "code2": "tm",
+    "code3": "tkm",
     "timezone": "Asia/Ashgabat"
   },
   {
     "name": "Tuvalu",
-    "code-2": "tv",
-    "code-3": "tuv",
+    "code2": "tv",
+    "code3": "tuv",
     "timezone": "Pacific/Funafuti"
   },
   {
     "name": "Uganda",
-    "code-2": "ug",
-    "code-3": "uga",
+    "code2": "ug",
+    "code3": "uga",
     "timezone": "Africa/Kampala"
   },
   {
     "name": "Ukraine",
-    "code-2": "ua",
-    "code-3": "ukr",
+    "code2": "ua",
+    "code3": "ukr",
     "timezone": "Europe/Kiev"
   },
   {
     "name": "United Arab Emirates",
-    "code-2": "ae",
-    "code-3": "are",
+    "code2": "ae",
+    "code3": "are",
     "timezone": "Asia/Dubai"
   },
   {
     "name": "United Kingdom",
-    "code-2": "gb",
-    "code-3": "gbr",
+    "code2": "gb",
+    "code3": "gbr",
     "timezone": "Europe/London"
   },
   {
     "name": "United States of America",
-    "code-2": "us",
-    "code-3": "usa",
+    "code2": "us",
+    "code3": "usa",
     "timezone": "America/New_York"
   },
   {
     "name": "Uruguay",
-    "code-2": "uy",
-    "code-3": "ury",
+    "code2": "uy",
+    "code3": "ury",
     "timezone": "America/Montevideo"
   },
   {
     "name": "Uzbekistan",
-    "code-2": "uz",
-    "code-3": "uzb",
+    "code2": "uz",
+    "code3": "uzb",
     "timezone": "Asia/Tashkent"
   },
   {
     "name": "Vanuatu",
-    "code-2": "vu",
-    "code-3": "vut",
+    "code2": "vu",
+    "code3": "vut",
     "timezone": "Pacific/Efate"
   },
   {
     "name": "Vatican City",
-    "code-2": "va",
-    "code-3": "vat",
+    "code2": "va",
+    "code3": "vat",
     "timezone": "Europe/Vatican"
   },
   {
     "name": "Venezuela",
-    "code-2": "ve",
-    "code-3": "ven",
+    "code2": "ve",
+    "code3": "ven",
     "timezone": "America/Caracas"
   },
   {
     "name": "Vietnam",
-    "code-2": "vn",
-    "code-3": "vnm",
+    "code2": "vn",
+    "code3": "vnm",
     "timezone": "Asia/Ho_Chi_Minh"
   },
   {
     "name": "Yemen",
-    "code-2": "ye",
-    "code-3": "yem",
+    "code2": "ye",
+    "code3": "yem",
     "timezone": "Asia/Aden"
   },
   {
     "name": "Zambia",
-    "code-2": "zm",
-    "code-3": "zmb",
+    "code2": "zm",
+    "code3": "zmb",
     "timezone": "Africa/Lusaka"
   },
   {
     "name": "Zimbabwe",
-    "code-2": "zw",
-    "code-3": "zwe",
+    "code2": "zw",
+    "code3": "zwe",
     "timezone": "Africa/Harare"
   }
 ]

@@ -19,7 +19,7 @@ export function CardList() {
   }
 
   const filteredCountries = countriesData.filter((country) =>
-    storedCountries.includes(country["code-2"])
+    storedCountries.includes(country.code2)
   );
 
   return (
@@ -31,10 +31,11 @@ export function CardList() {
         <div className="flex flex-col gap-2  mb-lg:flex-row mb-lg:flex-wrap sm:gap-3 sm:flex-nowrap">
           {filteredCountries.map((country) => (
             <CardItem
-              key={country["code-2"]}
+              key={country.code2}
               country={country.name}
-              onClickCard={() => setActiveCountryByCode(country["code-2"])}
-              onClickCanel={() => removeCountry(country["code-2"])}
+              code={country.code2}
+              onClickCard={() => setActiveCountryByCode(country.code2)}
+              onClickCanel={() => removeCountry(country.code2)}
             />
           ))}
         </div>

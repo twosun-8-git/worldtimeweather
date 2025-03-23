@@ -10,12 +10,13 @@ import {
 } from "@/app/_components/shared";
 
 type Props = {
-  country?: string;
+  country: string;
+  code: string;
   onClickCard: () => void;
   onClickCanel: () => void;
 };
 
-export function CardItem({ country, onClickCard, onClickCanel }: Props) {
+export function CardItem({ country, code, onClickCard, onClickCanel }: Props) {
   const [visibleCancelButton, setVisibleCancelButton] = useState(false);
 
   const style =
@@ -36,7 +37,11 @@ export function CardItem({ country, onClickCard, onClickCanel }: Props) {
         onClick={onClickCard}
       >
         <figure className="flex items-start gap-x-1.5 sm:items-center">
-          <CircleImage src="/assets/flags/usa.png" alt="hoge" className="w-5" />
+          <CircleImage
+            src={`/assets/flags/${code}.png`}
+            alt={`${country} flag`}
+            className="w-5"
+          />
           <figcaption className={cn(style, mblgStyle, smStyle)}>
             <span>{country}</span>
           </figcaption>

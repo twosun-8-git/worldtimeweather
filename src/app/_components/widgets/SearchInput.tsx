@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 import { cn } from "@/utils";
 import { InputText, SearchIcon } from "@/app/_components/shared";
 
@@ -21,22 +19,11 @@ export function SearchInput({
   const baseStyle =
     "flex items-center gap-x-1 text-navy-100 absolute left-2 top-1/2 -translate-y-1/2 text-sm transition-opacity duration-300";
 
-  const [isFocused, setIsFocused] = useState(false);
-
-  const visibleStyle = isFocused ? "opacity-0" : "opacity-100";
-
-  const handleFocus = () => {
-    onFocus();
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(keyword.length > 0 ? true : false);
-  };
+  const placeholderOpacity = keyword.length > 0 ? "opacity-0" : "opacity-100";
 
   return (
     <label className="relative">
-      <div className={cn(baseStyle, visibleStyle)}>
+      <div className={cn(baseStyle, placeholderOpacity)}>
         <SearchIcon size={14} />
         <span>Search other country</span>
       </div>
@@ -48,8 +35,7 @@ export function SearchInput({
         }
         value={keyword}
         onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
+        onFocus={onFocus}
       />
     </label>
   );
