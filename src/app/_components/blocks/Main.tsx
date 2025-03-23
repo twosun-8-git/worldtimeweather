@@ -26,9 +26,21 @@ export function Main({ children }: Props) {
           const storedData = getActiveCountryByStorage();
 
           if (storedData) {
-            storedData.code = storedData.code.toLowerCase();
+            const storedTime = new Date(storedData.timeStamp).getTime();
+            const currentTime = new Date().getTime();
+            const convertMsByHours = 12 * 60 * 60 * 1000;
+            const isDataStale = currentTime - storedTime > convertMsByHours;
 
-            setLocalData(storedData);
+            if (isDataStale) {
+              const fetchedData = await fetchGeoInfo();
+              if (fetchedData) {
+                setLocalData(fetchedData);
+                saveActiveCountryToStorage(fetchedData);
+              }
+            } else {
+              storedData.code = storedData.code.toLowerCase();
+              setLocalData(storedData);
+            }
           } else {
             const fetchedData = await fetchGeoInfo();
 
