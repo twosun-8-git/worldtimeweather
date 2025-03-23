@@ -12,3 +12,5 @@ export const activeCountryAtom = atom<ActiveCountryData>({
   timezone: "",
   timeStamp: new Date(),
 });
+
+export const storedCountriesAtom = atom<string[]>([]);

@@ -1,38 +1,46 @@
+import { useEffect } from "react";
+import { useSetAtom } from "jotai";
+
 import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
+import { storedCountriesAtom } from "@/app/_atoms";
+import { getStoredCountriesByStorage } from "@/utils";
 
-export function useStoredCountries(storageKey = LOCAL_STORAGE_KEY_COUNTRIES) {
-  const getStoredCountries = (): string[] => {
-    if (typeof window === "undefined") return [];
+export function useStoredCountries() {
+  const storageKey = LOCAL_STORAGE_KEY_COUNTRIES;
 
-    const storedData = localStorage.getItem(storageKey);
-    if (!storedData) return [];
+  const setStoredCountries = useSetAtom(storedCountriesAtom);
 
-    try {
-      const countries = JSON.parse(storedData);
-      return Array.isArray(countries) ? countries : [];
-    } catch (e) {
-      console.error("Error parsing stored countries:", e);
-      return [];
-    }
-  };
+  useEffect(() => {
+    const countries = getStoredCountriesByStorage();
+
+    setStoredCountries(countries);
+  }, [setStoredCountries, storageKey]);
+
+  const getStoredCountries = getStoredCountriesByStorage();
 
   const saveCountry = (code: string): void => {
-    const countries = getStoredCountries();
+    const countries = getStoredCountriesByStorage();
 
     if (!countries.includes(code)) {
-      countries.push(code);
-      localStorage.setItem(storageKey, JSON.stringify(countries));
+      const updatedCountries = [...countries, code];
+
+      localStorage.setItem(storageKey, JSON.stringify(updatedCountries));
+      setStoredCountries(updatedCountries);
     }
   };
 
   const removeCountry = (code: string): void => {
-    const countries = getStoredCountries();
+    const countries = getStoredCountriesByStorage();
+
     const updatedCountries = countries.filter((item) => item !== code);
+
     localStorage.setItem(storageKey, JSON.stringify(updatedCountries));
+    setStoredCountries(updatedCountries);
   };
 
   const isCountrySaved = (code: string): boolean => {
-    const countries = getStoredCountries();
+    const countries = getStoredCountriesByStorage();
+
     return countries.includes(code);
   };
 

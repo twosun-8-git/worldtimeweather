@@ -22,13 +22,10 @@ export function List({ keyword }: Props) {
   const filteredCountries =
     keyword.length >= 2
       ? countriesData.filter((country) => {
-          const searchTerm = lowerKeyword;
           return (
-            country.name.toLowerCase().includes(searchTerm) ||
-            (country["code-2"] &&
-              country["code-2"].toLowerCase().includes(searchTerm)) ||
-            (country["code-3"] &&
-              country["code-3"].toLowerCase().includes(searchTerm))
+            country.name.includes(lowerKeyword) ||
+            (country["code-2"] && country["code-2"].includes(lowerKeyword)) ||
+            (country["code-3"] && country["code-3"].includes(lowerKeyword))
           );
         })
       : [];

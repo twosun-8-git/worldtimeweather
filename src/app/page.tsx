@@ -4,7 +4,7 @@ import {
   Advertisement,
   ActiveCotunryInfo,
   ActiveCotunryTime,
-  // CardList,
+  CardList,
   Search,
 } from "@/app/_components/parts";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <ActiveCotunryInfo />
         <ActiveCotunryTime />
         <Search />
-        {/* <CardList /> */}
+        <CardList />
       </Main>
       <Modal />
     </Container>

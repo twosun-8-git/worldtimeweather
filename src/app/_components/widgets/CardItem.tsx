@@ -4,7 +4,11 @@ import { cn } from "@/utils";
 import { CircleImage, MediumTimer } from "@/app/_components/shared";
 import { CancelButton } from "@/app/_components/shared";
 
-export function CardItem() {
+type Props = {
+  country?: string;
+};
+
+export function CardItem({ country }: Props) {
   const style =
     "flex flex-col text-gray-500 text-sm whitespace-nowrap sm:flex-row";
 
@@ -18,9 +22,9 @@ export function CardItem() {
         <figure className="flex items-start gap-x-1.5 sm:items-center">
           <CircleImage src="/assets/flags/usa.png" alt="hoge" className="w-5" />
           <figcaption className={cn(style, mblgStyle, smStyle)}>
-            <span>Unites State America</span>
-            <span className="hidden sm:inline">&nbsp;-&nbsp;</span>
-            <span>New_York</span>
+            <span>{country}</span>
+            {/* <span className="hidden sm:inline">&nbsp;-&nbsp;</span>
+            <span>New_York</span> */}
           </figcaption>
         </figure>
         <div className="py-1 pl-6 sm:pt-1 md:pt-0">
@@ -33,7 +37,7 @@ export function CardItem() {
         </div>
       </div>
       <CancelButton
-        className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2.5 sm:-right-2.5"
+        className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2 sm:-right-2"
         onClick={() => console.log(1)}
       />
     </div>
