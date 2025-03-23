@@ -19,13 +19,6 @@
   --gray-700: #94949d;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -33,19 +26,15 @@ body {
     "Helvetica Neue", Arial, sans-serif;
 }
 
-/*   開いた状態のダイアログ  */
 dialog[open] {
   opacity: 1;
 }
 
-/*   閉じた状態のダイアログ   */
 dialog {
   opacity: 0;
   transition: all 0.4s allow-discrete;
 }
 
-/*   開く前の状態  */
-/* 詳細度が同じであるため、前の dialog[open] ルールの後に置かなければ効果がありません */
 @starting-style {
   dialog[open] {
     opacity: 0;

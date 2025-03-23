@@ -38,15 +38,15 @@ export function Modal() {
         !visibleModal ? "hidden" : ""
       }`}
     >
-      <div className="w-[92%] max-w-900">
-        <div className="bg-white flex flex-col rounded-lg overflow-hidden md:flex-row">
-          <div className="flex flex-col gap-y-2 py-3 px-4  md:gap-y-10 md:p-6">
+      <div className="w-[92%] max-w-1028">
+        <div className="bg-white flex flex-col rounded-lg overflow-hidden md:flex-row md:justify-between">
+          <div className="flex flex-col gap-y-2 py-3 px-4  md:gap-y-10 md:p-6 desktop-lg:p-8">
             <dl>
               <dt className="text-sm font-bold sm:text-base md:mb-1">
                 Introduction
               </dt>
               <dd className="text-xs sm:text-sm">
-                You can check the <b>time, date, weather, and temperature</b>{" "}
+                You can check the <b>time, date, weather, and temperature</b>
                 for any country in the world.
               </dd>
             </dl>
@@ -74,11 +74,11 @@ export function Modal() {
               </dd>
             </dl>
           </div>
-          <div className="py-3 px-4 bg-background-gray md:w-[356px] md:shrink-0 md:p-6">
+          <div className="py-3 px-4 bg-background-gray md:w-[356px] md:shrink-0 md:p-6 desktop-lg:w-[420px] desktop-lg:p-8">
             <Form />
           </div>
         </div>
-        <div className="flex justify-center mt-4 md:absolute md:top-0 md:right-[4%] pc:top-2 pc:right-4">
+        <div className="flex justify-center mt-4 md:absolute md:top-0 md:right-[4%] pc:right-2">
           <CancelButton onClick={() => setVisibleModal(false)} size="lg" />
         </div>
       </div>

@@ -21,7 +21,7 @@ export function LargeTimer() {
   const style =
     "w-full h-full text-10xl-vw font-black text-center leading-none flex items-center justify-between md:mt-2";
 
-  const styleContainer = "pc:text-10xl-fix";
+  const styleContainer = "pc:text-10xl-fix desktop-lg:text-20xl-fix";
 
   return (
     <time dateTime={dateTimeISO} className={cn(style, styleContainer)}>

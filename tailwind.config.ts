@@ -29,9 +29,11 @@ export default {
         "mb-lg": "414px",
         pc: "940px",
         desktop: "980px",
+        "desktop-lg": "1620px",
       },
       maxWidth: {
         "900": "900px",
+        "1028": "1028px",
       },
       fontSize: {
         xs: "10px",
@@ -39,6 +41,7 @@ export default {
         base: "14px",
         "10xl-vw": "18.6vw",
         "10xl-fix": "198px",
+        "20xl-fix": "220px",
       },
     },
   },

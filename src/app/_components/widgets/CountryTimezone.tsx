@@ -20,7 +20,7 @@ export function CountryTimezone({ country, code, timezone }: Props) {
       <figcaption className={cn(style, mdStyle)}>
         <span>{country}</span>
         <span className="hidden md:inline">&nbsp;-&nbsp;</span>
-        <span>{timezone.replace("/", " / ")}</span>
+        <span>{timezone}</span>
       </figcaption>
     </figure>
   );
