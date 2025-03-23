@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useAtom } from "jotai";
 
 import { visibleModalAtom } from "@/app/_atoms";
-import { CloseButton } from "../shared";
+import { CancelButton } from "@/app/_components/shared";
 import { Form } from "@/app/_components/widgets";
 
 export function Modal() {
@@ -79,7 +79,7 @@ export function Modal() {
           </div>
         </div>
         <div className="flex justify-center mt-4 md:absolute md:top-0 md:right-[4%] pc:top-2 pc:right-4">
-          <CloseButton onClick={() => setVisibleModal(false)} size="lg" />
+          <CancelButton onClick={() => setVisibleModal(false)} size="lg" />
         </div>
       </div>
     </dialog>

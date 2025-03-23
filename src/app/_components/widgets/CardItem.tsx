@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils";
 import { CircleImage, MediumTimer } from "@/app/_components/shared";
-import { CloseButton } from "@/app/_components/shared";
+import { CancelButton } from "@/app/_components/shared";
 
 export function CardItem() {
   const style =
@@ -32,7 +32,7 @@ export function CardItem() {
           <span>36°C / 96.8°F</span>
         </div>
       </div>
-      <CloseButton
+      <CancelButton
         className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2.5 sm:-right-2.5"
         onClick={() => console.log(1)}
       />

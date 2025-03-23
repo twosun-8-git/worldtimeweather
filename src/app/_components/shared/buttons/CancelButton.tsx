@@ -10,7 +10,7 @@ type Props = {
   size?: "lg" | "md";
 };
 
-export function CloseButton({ className, onClick, size = "md" }: Props) {
+export function CancelButton({ className, onClick, size = "md" }: Props) {
   const switchSize = size === "md" ? 12 : 20;
 
   const baseStyle =
