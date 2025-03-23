@@ -4,7 +4,7 @@ import { useAtomValue } from "jotai";
 
 import { useActiveCountry, useStoredCountries } from "@/app/_hooks";
 import { activeCountryAtom } from "@/app/_atoms";
-import { CurrentButton, SaveButton } from "@/app/_components/shared";
+import { CurrentButton, SelectButton } from "@/app/_components/shared";
 
 type Props = {
   code: string;
@@ -26,7 +26,7 @@ export function ListItemButton({ code }: Props) {
     code === activeCountry.code ? (
       <CurrentButton />
     ) : (
-      <SaveButton onClick={handleSave} />
+      <SelectButton onClick={handleSave} />
     );
 
   return (
