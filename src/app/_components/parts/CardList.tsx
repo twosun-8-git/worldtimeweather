@@ -23,7 +23,7 @@ export function CardList() {
   );
 
   return (
-    <div className="pt-8 px-1">
+    <div className="pt-8 px-2">
       <p className="text-xs text-gray-300 sm:text-sm">
         Your Histories ( It is lost when the browser history cleared )
       </p>

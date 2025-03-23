@@ -60,7 +60,7 @@ export function List({ keyword }: Props) {
   return (
     <ul
       ref={listRef}
-      className={`divide-y divide-gray-100 border border-gray-100 rounded-b-md bg-white relative overflow-y-auto`}
+      className={`divide-y divide-gray-100 w-[calc(100%-16px)] border border-gray-100 absolute rounded-b-md bg-white z-20 overflow-y-auto`}
       style={{ maxHeight: maxHeight }}
     >
       {filteredCountries.map((country, index) => (

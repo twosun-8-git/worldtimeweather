@@ -43,7 +43,7 @@ export function Search() {
   }, [setVisibleList]);
 
   return (
-    <div className="mt-2 px-1 md:mt-4" ref={containerRef}>
+    <div className="w-full px-2 relative mt-2 md:mt-4" ref={containerRef}>
       <SearchInput
         keyword={keyword}
         onChange={handleChange}
