@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { cn } from "@/utils";
 import {
   CircleImage,
@@ -14,6 +16,8 @@ type Props = {
 };
 
 export function CardItem({ country, onClickCard, onClickCanel }: Props) {
+  const [visibleCancelButton, setVisibleCancelButton] = useState(false);
+
   const style =
     "flex flex-col text-gray-500 text-sm whitespace-nowrap sm:flex-row";
 
@@ -22,10 +26,13 @@ export function CardItem({ country, onClickCard, onClickCanel }: Props) {
   const smStyle = "sm:text-sm";
 
   return (
-    <div className="relative flex-none w-full border border-gray-100 p-2 pr-7 text-left rounded-lg mb-lg:w-[calc((100%-8px)/2)] mb-lg:p-2.5 sm:w-[240px] sm:h-[108px] sm:pr-2">
+    <div
+      className="relative flex-none w-full border border-gray-100 p-2 pr-7 text-left rounded-lg mb-lg:w-[calc((100%-8px)/2)] mb-lg:p-2.5 sm:w-[240px] sm:h-[108px] sm:pr-2"
+      onMouseOver={() => setVisibleCancelButton(true)}
+      onMouseLeave={() => setVisibleCancelButton(false)}
+    >
       <button
-        type="button"
-        className="contents sm:h-full sm:flex sm:flex-col sm:justify-center"
+        className="contents w-full sm:h-full sm:flex sm:flex-col sm:justify-center"
         onClick={onClickCard}
       >
         <figure className="flex items-start gap-x-1.5 sm:items-center">
@@ -44,7 +51,11 @@ export function CardItem({ country, onClickCard, onClickCanel }: Props) {
         </div>
       </button>
       <CancelButton
-        className="flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2 sm:-right-2"
+        className={cn(
+          `flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2 sm:-right-2 transition-opacity duration-140 ease-in-out ${
+            visibleCancelButton ? "opacity-100" : "opacity-0"
+          }`
+        )}
         onClick={onClickCanel}
       />
     </div>

@@ -27,7 +27,7 @@ export function CardList() {
       <p className="text-xs text-gray-300 sm:text-sm">
         Your Histories ( It is lost when the browser history cleared )
       </p>
-      <div className="pt-2 pb-4 sm:pt-4 sm:overflow-x-scroll">
+      <div className="pt-2 pb-4 sm:overflow-x-scroll">
         <div className="flex flex-col gap-2  mb-lg:flex-row mb-lg:flex-wrap sm:gap-3 sm:flex-nowrap">
           {filteredCountries.map((country) => (
             <CardItem
