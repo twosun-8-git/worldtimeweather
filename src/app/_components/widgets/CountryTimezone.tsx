@@ -1,4 +1,4 @@
-import { cn } from "../../../utils";
+import { cn } from "@/utils";
 import { CircleImage } from "@/app/_components/shared";
 
 type Props = {

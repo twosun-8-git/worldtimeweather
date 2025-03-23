@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { cn } from "../../../utils";
+import { cn } from "@/utils";
 import { InputText, SearchIcon } from "@/app/_components/shared";
 
 type Props = {

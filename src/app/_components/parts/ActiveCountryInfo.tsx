@@ -2,7 +2,7 @@
 
 import { useAtomValue } from "jotai";
 
-import { cn } from "../../../utils";
+import { cn } from "@/utils";
 import { activeCountryAtom } from "@/app/_atoms";
 
 import {
@@ -13,9 +13,9 @@ import {
 } from "@/app/_components/widgets";
 
 export function ActiveCotunryInfo() {
-  const localData = useAtomValue(activeCountryAtom);
+  const activeCountry = useAtomValue(activeCountryAtom);
 
-  const { country, code, timezone } = localData;
+  const { country, code, timezone } = activeCountry;
 
   const style =
     "flex flex-col gap-y-1 text-gray-500 text-xs border border-gray-100 p-2 rounded";

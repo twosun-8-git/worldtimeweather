@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 
-import { cn } from "../../../../utils";
+import { cn } from "@/utils";
 
 type Props = {
   className?: string;

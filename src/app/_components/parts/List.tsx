@@ -3,8 +3,8 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 
 import countriesData from "@/data/countries.json";
-import { ListItem } from "@/app/_components/widgets";
 import { BREAKPOINTS } from "@/consts";
+import { ListItem } from "@/app/_components/widgets";
 
 type Props = {
   keyword: string;

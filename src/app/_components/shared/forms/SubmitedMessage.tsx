@@ -1,7 +1,7 @@
 import { Check, X } from "lucide-react";
 import { useSetAtom } from "jotai";
 
-import { cn } from "../../../../utils";
+import { cn } from "@/utils";
 import { visibleModalAtom } from "@/app/_atoms";
 
 type Props = {

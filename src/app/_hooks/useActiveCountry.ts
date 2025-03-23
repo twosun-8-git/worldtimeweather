@@ -47,7 +47,7 @@ export function useActiveCountry() {
 
     const newActiveCountry: ActiveCountryData = {
       country: countryData.name,
-      code: countryData["code-2"].toUpperCase(),
+      code: countryData["code-2"],
       timezone: countryData.timezone,
       timeStamp: new Date().toISOString(),
     };

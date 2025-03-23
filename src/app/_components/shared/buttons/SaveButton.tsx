@@ -1,28 +1,21 @@
-import { cn } from "../../../../utils";
-import { CheckIcon } from "../icons";
+import { cn } from "@/utils";
 
 type Props = {
   className?: string;
-  isJustSaved: boolean;
   onClick: () => void;
 };
 
-export function SaveButton({ className, isJustSaved, onClick }: Props) {
+export function SaveButton({ className, onClick }: Props) {
   const baseStyle =
-    "flex h-7 items-center justify-center gap-x-1 rounded py-2 px-2.5 text-white leading-none cursor-pointer";
+    "flex h-7 items-center justify-center bg-blue gap-x-1 rounded py-2 px-2.5 text-white leading-none cursor-pointer";
 
   return (
     <button
       type="button"
-      className={cn(
-        baseStyle,
-        className,
-        `${isJustSaved ? "bg-gray-200" : "bg-blue"}`
-      )}
+      className={cn(baseStyle, className)}
       onClick={onClick}
     >
-      {isJustSaved && <CheckIcon size={12} color="#ffffff" />}
-      <span className="text-sm">{isJustSaved ? "saved" : "save"}</span>
+      <span className="text-sm">save</span>
     </button>
   );
 }

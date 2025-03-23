@@ -1,4 +1,4 @@
-import { cn } from "../../../../utils";
+import { cn } from "@/utils";
 
 type Props = {
   message: string | undefined;
