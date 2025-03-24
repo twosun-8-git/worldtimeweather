@@ -8,7 +8,7 @@ type Props = {
 export function Label({ children, label, require = true }: Props) {
   return (
     <label>
-      <span className="block mb-1">
+      <span className="block mb-0.5">
         {require && (
           <span className="text-red font-bold text-sm mr-1 sm:text-base">
             *
