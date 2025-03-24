@@ -1,4 +1,3 @@
-// src/app/api/geoip/route.ts
 import { NextResponse } from "next/server";
 
 import countries from "i18n-iso-countries";
@@ -21,7 +20,6 @@ export async function GET(request: Request) {
   }
 
   try {
-    // ipinfo.ioを使用して地理情報を取得
     const response = await fetch(`https://ipinfo.io/${ip}/json`);
 
     if (!response.ok) {
@@ -30,7 +28,6 @@ export async function GET(request: Request) {
 
     const data = await response.json();
 
-    // ipinfo.ioからのレスポンスを整形して返す
     return NextResponse.json({
       ip,
       country: countries.getName(data.country, "en"),

@@ -9,14 +9,12 @@ export function useFetchGeoInfo() {
       }
 
       const data = await res.json();
-      const localData = {
+      return {
         country: data.country,
         code: data.countryCode,
         timezone: data.timezone,
         timeStamp: new Date(),
       };
-
-      return localData;
     } catch (err) {
       console.error("エラー:", err);
       return null;
