@@ -28,7 +28,7 @@ export function ActiveCotunryInfo() {
     <div className="flex items-start w-full justify-between md:items-center pc:px-1">
       <CountryTimezone country={country} code={code} timezone={timezone} />
       <div className={cn(style, mdStyle, containerStyle)}>
-        <Today />
+        <Today timezone={timezone} />
         <Weather />
         <Temp />
       </div>

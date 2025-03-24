@@ -5,6 +5,7 @@ import { useState } from "react";
 import { cn } from "@/utils";
 import {
   CircleImage,
+  CountryDate,
   MediumTimer,
   CancelButton,
 } from "@/app/_components/shared";
@@ -12,11 +13,18 @@ import {
 type Props = {
   country: string;
   code: string;
+  timezone: string;
   onClickCard: () => void;
   onClickCanel: () => void;
 };
 
-export function CardItem({ country, code, onClickCard, onClickCanel }: Props) {
+export function CardItem({
+  country,
+  code,
+  timezone,
+  onClickCard,
+  onClickCanel,
+}: Props) {
   const [visibleCancelButton, setVisibleCancelButton] = useState(false);
 
   const style =
@@ -50,7 +58,7 @@ export function CardItem({ country, code, onClickCard, onClickCanel }: Props) {
           <MediumTimer className="sm:text-3xl md:text-4xl" />
         </div>
         <div className="flex gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
-          <span>Jan 25</span>
+          <CountryDate timezone={timezone} />
           <span>Sunny</span>
           <span>36°C / 96.8°F</span>
         </div>

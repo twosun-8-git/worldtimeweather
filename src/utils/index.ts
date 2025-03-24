@@ -55,3 +55,35 @@ export const getStoredCountriesByStorage = () => {
     return [];
   }
 };
+
+export function getDateByTimezone(timezone: string) {
+  if (!timezone) return;
+
+  try {
+    const now = new Date();
+
+    const displayFormatter = new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric",
+      timeZone: timezone,
+    });
+
+    const isoFormatter = new Intl.DateTimeFormat("en-CA", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      timeZone: timezone,
+    });
+
+    const displayDate = displayFormatter.format(now);
+    const isoDate = isoFormatter.format(now);
+
+    return {
+      display: displayDate,
+      iso: isoDate,
+    };
+  } catch (error) {
+    console.error(`タイムゾーン '${timezone}' が無効です:`, error);
+    return "Invalid timezone";
+  }
+}

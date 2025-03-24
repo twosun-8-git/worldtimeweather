@@ -66,6 +66,7 @@ export function List({ keyword }: Props) {
           ref={index === 0 ? itemRef : null}
           country={country.name}
           code={country.code2 || ""}
+          timezone={country.timezone}
         />
       ))}
     </ul>

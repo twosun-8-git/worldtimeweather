@@ -1,15 +1,16 @@
 import { forwardRef } from "react";
 
-import { CircleImage } from "@/app/_components/shared";
+import { CircleImage, CountryDate } from "@/app/_components/shared";
 import { ListItemButton } from "./ListItemButton";
 
 type Props = {
   country: string;
   code: string;
+  timezone: string;
 };
 
 export const ListItem = forwardRef<HTMLLIElement, Props>(
-  ({ country, code }: Props, ref) => {
+  ({ country, code, timezone }: Props, ref) => {
     return (
       <li ref={ref} className="py-2 px-2 md:flex md:items-center md:w-full">
         <figure className="flex items-start gap-x-1 mb-md:items-center md:w-[308px] md:whitespace-nowrap pc:w-[320px] pc:gap-x-1.5">
@@ -26,7 +27,7 @@ export const ListItem = forwardRef<HTMLLIElement, Props>(
           <time className="font-black text-2xl">20:17:38</time>
         </div>
         <div className="flex gap-x-2 text-xs pl-7 text-gray-500 leading-none md:text-sm md:pt-[4px] pc:pl-10 pc:gap-x-3">
-          <time>Jan 25</time>
+          <CountryDate timezone={timezone} />
           <span>Sunny</span>
           <span>36°C / 96.8°F</span>
         </div>
