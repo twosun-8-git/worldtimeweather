@@ -36,20 +36,20 @@ export function CardItem({ country, code, onClickCard, onClickCanel }: Props) {
         className="contents w-full sm:h-full sm:flex sm:flex-col sm:justify-center"
         onClick={onClickCard}
       >
-        <figure className="flex items-start gap-x-1.5 sm:items-center">
+        <figure className="flex items-start gap-x-1 sm:items-center sm:gap-x-2">
           <CircleImage
             src={`/assets/flags/${code}.png`}
             alt={`${country} flag`}
-            className="w-5"
+            className="w-4 sm:w-6"
           />
           <figcaption className={cn(style, mblgStyle, smStyle)}>
             <span>{country}</span>
           </figcaption>
         </figure>
-        <div className="py-1 pl-6 sm:pt-1 text-left md:pt-0">
+        <div className="py-1 pl-5 text-left sm:pt-1 sm:pl-8 md:pt-0">
           <MediumTimer className="sm:text-3xl md:text-4xl" />
         </div>
-        <div className="flex gap-x-1 text-gray-500 text-xs pl-6 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2">
+        <div className="flex gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
           <span>Jan 25</span>
           <span>Sunny</span>
           <span>36°C / 96.8°F</span>

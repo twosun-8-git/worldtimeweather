@@ -28,7 +28,7 @@ export function CardList() {
         Your Histories ( It is lost when the browser history cleared )
       </p>
       <div className="pt-2 pb-4 sm:overflow-x-scroll">
-        <div className="flex flex-col gap-2  mb-lg:flex-row mb-lg:flex-wrap sm:gap-3 sm:flex-nowrap">
+        <div className="flex flex-col gap-1 mb-lg:flex-row mb-lg:flex-wrap sm:gap-3 sm:flex-nowrap">
           {filteredCountries.map((country) => (
             <CardItem
               key={country.code2}
