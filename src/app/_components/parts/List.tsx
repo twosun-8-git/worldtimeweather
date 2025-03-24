@@ -62,10 +62,10 @@ export function List({ keyword }: Props) {
     >
       {filteredCountries.map((country, index) => (
         <ListItem
-          key={country.code3 || index}
+          key={country.code2 || index}
           ref={index === 0 ? itemRef : null}
           country={country.name}
-          code={country.code3 || ""}
+          code={country.code2 || ""}
         />
       ))}
     </ul>
