@@ -5,11 +5,22 @@ export type form = {
   website: string;
 };
 
-export type ActiveCountryData = {
+export type ActiveCountry = {
   country: string;
   code: string;
   timezone: string;
   timeStamp: Date | string;
+};
+
+export type ActiveWeather = {
+  name: string;
+  region: string;
+  country: string;
+  timezone: string;
+  temp_c: number;
+  temp_f: number;
+  condition: string;
+  updated: string;
 };
 
 export type CountryData = {
