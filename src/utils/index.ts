@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { type ClassValue, clsx } from "clsx";
 
-import { ActiveCountryData } from "@/types";
+import { ActiveCountry } from "@/types";
 import {
   LOCAL_STORAGE_KEY_ACTIVE,
   LOCAL_STORAGE_KEY_COUNTRIES,
@@ -11,9 +11,7 @@ export function cn(...classes: ClassValue[]) {
   return twMerge(clsx(...classes));
 }
 
-export const saveActiveCountryToStorage = (
-  countryData: ActiveCountryData
-): void => {
+export const saveActiveCountryToStorage = (countryData: ActiveCountry) => {
   if (typeof window !== "undefined") {
     try {
       localStorage.setItem(
@@ -34,7 +32,7 @@ export const getActiveCountryByStorage = () => {
     if (!storedData) return null;
 
     const parsedData = JSON.parse(storedData);
-    return parsedData as ActiveCountryData;
+    return parsedData;
   } catch (error) {
     console.error("アクティブな国の取得に失敗しました:", error);
     return null;

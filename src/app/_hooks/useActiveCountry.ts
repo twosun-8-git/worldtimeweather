@@ -3,7 +3,6 @@ import { useAtom } from "jotai";
 
 import countriesData from "@/data/countries.json";
 import { activeCountryAtom } from "@/app/_atoms";
-import { ActiveCountryData } from "@/types";
 import { getActiveCountryByStorage, saveActiveCountryToStorage } from "@/utils";
 
 export function useActiveCountry() {
@@ -45,7 +44,7 @@ export function useActiveCountry() {
       return;
     }
 
-    const newActiveCountry: ActiveCountryData = {
+    const newActiveCountry = {
       country: countryData.name,
       code: countryData.code2,
       timezone: countryData.timezone,
