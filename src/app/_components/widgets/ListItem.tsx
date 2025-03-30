@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-import { CircleImage, CountryDate } from "@/app/_components/shared";
+import { CircleImage } from "@/app/_components/shared";
 import { ListItemButton } from "./ListItemButton";
 
 type Props = {
@@ -21,15 +21,12 @@ export const ListItem = forwardRef<HTMLLIElement, Props>(
           />
           <figcaption className="flex flex-col text-sm font-bold pt-1 mb-md:flex-row mb-lg:text-[16px] md:pt-0">
             <span>{country}</span>
+            <span>-</span>
+            <span>{timezone}</span>
           </figcaption>
         </figure>
         <div className="pl-7 py-1 leading-none md:pl-0 md:py-0">
           <time className="font-black text-2xl">20:17:38</time>
-        </div>
-        <div className="flex gap-x-2 text-xs pl-7 text-gray-500 leading-none md:text-sm md:pt-[4px] pc:pl-10 pc:gap-x-3">
-          <CountryDate timezone={timezone} />
-          <span>Sunny</span>
-          <span>36°C / 96.8°F</span>
         </div>
         <ListItemButton code={code} />
       </li>
