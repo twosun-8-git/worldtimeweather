@@ -1,0 +1,42 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            # npmのキャッシュを設定
+            - npm config set cache /tmp/.npm-cache --global
+            # クリーンインストールの代わりに通常のinstallを使用
+            - npm install
+        build:
+          commands:
+            # 環境変数の設定
+            - |
+              for var in \
+                SMTP_FROM \
+                SMTP_HOST \
+                SMTP_PASSWORD \
+                SMTP_PORT \
+                SMTP_TO \
+                SMTP_USER \
+                WEATHER_API_KEY; do
+                echo "$var=${!var}" >> .env
+              done
+            # ビルドコマンド
+            - npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          # キャッシュ対象を具体的に指定
+          - node_modules/**/*
+          - /tmp/.npm-cache/**/*
+          - .next/cache/**/*
+      customHeaders:
+        - pattern: "**/*"
+          headers:
+            - key: "Cache-Control"
+              value: "public, max-age=31536000, immutable"
+    appRoot: .
