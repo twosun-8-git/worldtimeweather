@@ -3,7 +3,7 @@
     "name": "Abkhazia",
     "code2": "ab",
     "code3": "abk",
-    "timezone": "UTC"
+    "timezone": "Europe/Moscow"
   },
   {
     "name": "Afghanistan",
@@ -69,12 +69,6 @@
     "name": "Armenia",
     "code2": "am",
     "code3": "arm",
-    "timezone": "Asia/Yerevan"
-  },
-  {
-    "name": "Artsakh (Nagorno-Karabakh)",
-    "code2": "ax",
-    "code3": "arc",
     "timezone": "Asia/Yerevan"
   },
   {
@@ -162,12 +156,6 @@
     "timezone": "America/La_Paz"
   },
   {
-    "name": "Bonaire, Saint Eustatius and Saba",
-    "code2": "bq",
-    "code3": "bes",
-    "timezone": "America/Kralendijk"
-  },
-  {
     "name": "Bosnia and Herzegovina",
     "code2": "ba",
     "code3": "bih",
@@ -246,7 +234,7 @@
     "timezone": "America/Cayman"
   },
   {
-    "name": "Central African Republic",
+    "name": "Central African",
     "code2": "cf",
     "code3": "caf",
     "timezone": "Africa/Bangui"
@@ -294,13 +282,13 @@
     "timezone": "Indian/Comoro"
   },
   {
-    "name": "Congo (Congo-Brazzaville)",
+    "name": "Congo Brazzaville",
     "code2": "cg",
     "code3": "cog",
     "timezone": "Africa/Brazzaville"
   },
   {
-    "name": "Congo (Congo-Kinshasa)",
+    "name": "Congo Kinshasa",
     "code2": "cd",
     "code3": "cod",
     "timezone": "Africa/Kinshasa"
@@ -373,8 +361,8 @@
   },
   {
     "name": "Donetsk People's Republic",
-    "code2": "",
-    "code3": "dnr",
+    "code2": "dpr",
+    "code3": "dpr",
     "timezone": "Europe/Simferopol"
   },
   {
@@ -484,6 +472,12 @@
     "code2": "gr",
     "code3": "grc",
     "timezone": "Europe/Athens"
+  },
+  {
+    "name": "Greenland",
+    "code2": "gl",
+    "code3": "grl",
+    "timezone": "America/Nuuk"
   },
   {
     "name": "Grenada",
@@ -630,6 +624,7 @@
     "timezone": "Pacific/Tarawa"
   },
   {
+    "flag": false,
     "name": "Kosovo",
     "code2": "xk",
     "code3": "xkX",
@@ -697,7 +692,7 @@
   },
   {
     "name": "Luhansk People's Republic",
-    "code2": "",
+    "code2": "lnr",
     "code3": "lnr",
     "timezone": "Europe/Simferopol"
   },
@@ -877,7 +872,7 @@
   },
   {
     "name": "Northern Cyprus",
-    "code2": "cy",
+    "code2": "cyp-n",
     "code3": "cyp-n",
     "timezone": "Asia/Nicosia"
   },
@@ -952,6 +947,12 @@
     "code2": "pt",
     "code3": "prt",
     "timezone": "Europe/Lisbon"
+  },
+  {
+    "name": "Puerto Rico",
+    "code2": "pr",
+    "code3": "pri",
+    "timezone": "America/Puerto_Rico"
   },
   {
     "name": "Qatar",
@@ -1087,7 +1088,7 @@
   },
   {
     "name": "Somaliland",
-    "code2": "so",
+    "code2": "som-l",
     "code3": "som-l",
     "timezone": "Africa/Mogadishu"
   },
@@ -1102,12 +1103,6 @@
     "code2": "kr",
     "code3": "kor",
     "timezone": "Asia/Seoul"
-  },
-  {
-    "name": "South Ossetia",
-    "code2": "",
-    "code3": "ossetia",
-    "timezone": "Asia/Tbilisi"
   },
   {
     "name": "South Sudan",
@@ -1126,12 +1121,6 @@
     "code2": "lk",
     "code3": "lka",
     "timezone": "Asia/Colombo"
-  },
-  {
-    "name": "State of Palestine",
-    "code2": "ps",
-    "code3": "pse",
-    "timezone": "Asia/Gaza"
   },
   {
     "name": "Sudan",
@@ -1198,12 +1187,6 @@
     "code2": "to",
     "code3": "ton",
     "timezone": "Pacific/Tongatapu"
-  },
-  {
-    "name": "Transnistria",
-    "code2": "md",
-    "code3": "pmd",
-    "timezone": "Europe/Chisinau"
   },
   {
     "name": "Trinidad and Tobago",
