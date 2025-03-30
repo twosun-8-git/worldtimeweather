@@ -34,6 +34,14 @@ export function CountryDateWeather({ timezone }: Props) {
 
   useEffect(() => {
     getWeather();
+
+    const intervalId = setInterval(() => {
+      getWeather();
+    }, 15 * 60 * 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [getWeather]);
 
   const style =
