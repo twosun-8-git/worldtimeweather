@@ -3,43 +3,43 @@ import { useSetAtom } from "jotai";
 
 import { LOCAL_STORAGE_KEY_COUNTRIES } from "@/consts";
 import { storedCountriesAtom } from "@/app/_atoms";
-import { getStoredCountriesByStorage } from "@/utils";
+import { getLocalStorage, setLocalStorageArray } from "@/utils";
 
 export function useStoredCountries() {
-  const storageKey = LOCAL_STORAGE_KEY_COUNTRIES;
+  const key = LOCAL_STORAGE_KEY_COUNTRIES;
 
   const setStoredCountries = useSetAtom(storedCountriesAtom);
 
   useEffect(() => {
-    const countries = getStoredCountriesByStorage();
+    const countries = getLocalStorage(key, true);
 
     setStoredCountries(countries);
-  }, [setStoredCountries, storageKey]);
+  }, [setStoredCountries, key]);
 
-  const getStoredCountries = getStoredCountriesByStorage();
+  const getStoredCountries = getLocalStorage(key, true);
 
   const saveCountry = (code: string): void => {
-    const countries = getStoredCountriesByStorage();
+    const countries = getLocalStorage(key, true);
 
     if (!countries.includes(code)) {
       const updatedCountries = [...countries, code];
 
-      localStorage.setItem(storageKey, JSON.stringify(updatedCountries));
+      setLocalStorageArray(key, updatedCountries);
       setStoredCountries(updatedCountries);
     }
   };
 
   const removeCountry = (code: string): void => {
-    const countries = getStoredCountriesByStorage();
+    const countries = getLocalStorage(key, true);
 
-    const updatedCountries = countries.filter((item) => item !== code);
+    const updatedCountries = countries.filter((item: string) => item !== code);
 
-    localStorage.setItem(storageKey, JSON.stringify(updatedCountries));
+    setLocalStorageArray(key, updatedCountries);
     setStoredCountries(updatedCountries);
   };
 
   const isCountrySaved = (code: string): boolean => {
-    const countries = getStoredCountriesByStorage();
+    const countries = getLocalStorage(key, true);
 
     return countries.includes(code);
   };

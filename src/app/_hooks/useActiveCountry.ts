@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { useAtom } from "jotai";
 
 import countriesData from "@/data/countries.json";
+import { LOCAL_STORAGE_KEY_ACTIVE_COUNTRY } from "@/consts";
 import { activeCountryAtom } from "@/app/_atoms";
-import { getActiveCountryByStorage, saveActiveCountryToStorage } from "@/utils";
+import { getLocalStorage, setLocalStorage } from "@/utils";
 
 export function useActiveCountry() {
   const [activeCountry, setActiveCountry] = useAtom(activeCountryAtom);
@@ -11,7 +12,7 @@ export function useActiveCountry() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const storedData = getActiveCountryByStorage();
+    const storedData = getLocalStorage(LOCAL_STORAGE_KEY_ACTIVE_COUNTRY);
     if (storedData) {
       try {
         setActiveCountry(storedData);
@@ -54,7 +55,7 @@ export function useActiveCountry() {
     setActiveCountry(newActiveCountry);
 
     if (typeof window !== "undefined") {
-      saveActiveCountryToStorage(newActiveCountry);
+      setLocalStorage(LOCAL_STORAGE_KEY_ACTIVE_COUNTRY, newActiveCountry);
     }
   };
 

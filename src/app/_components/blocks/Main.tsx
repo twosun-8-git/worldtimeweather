@@ -3,13 +3,13 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useSetAtom } from "jotai";
 
+import {
+  LOCAL_STORAGE_KEY_ACTIVE_COUNTRY,
+  LOCAL_STORAGE_KEY_COUNTRIES,
+} from "@/consts";
 import { useFetchGeoInfo } from "@/app/_hooks";
 import { activeCountryAtom, storedCountriesAtom } from "@/app/_atoms";
-import {
-  getActiveCountryByStorage,
-  getStoredCountriesByStorage,
-  saveActiveCountryToStorage,
-} from "@/utils";
+import { getLocalStorage, setLocalStorage } from "@/utils";
 
 type Props = {
   children: ReactNode;
@@ -29,7 +29,9 @@ export function Main({ children }: Props) {
     const initializeGeoData = async () => {
       try {
         if (typeof window !== "undefined") {
-          const storedActiveCountry = getActiveCountryByStorage();
+          const storedActiveCountry = getLocalStorage(
+            LOCAL_STORAGE_KEY_ACTIVE_COUNTRY
+          );
 
           if (storedActiveCountry) {
             const storedTime = new Date(
@@ -43,7 +45,7 @@ export function Main({ children }: Props) {
               const fetchedData = await fetchGeoInfo();
               if (fetchedData) {
                 setActiveCountry(fetchedData);
-                saveActiveCountryToStorage(fetchedData);
+                setLocalStorage(LOCAL_STORAGE_KEY_ACTIVE_COUNTRY, fetchedData);
               }
             } else {
               storedActiveCountry.code = storedActiveCountry.code;
@@ -54,12 +56,15 @@ export function Main({ children }: Props) {
 
             if (fetchedData) {
               setActiveCountry(fetchedData);
-              saveActiveCountryToStorage(fetchedData);
+              setLocalStorage(LOCAL_STORAGE_KEY_ACTIVE_COUNTRY, fetchedData);
             }
           }
 
-          const storedCountries = getStoredCountriesByStorage();
-          if (storedCountries.length > 0) {
+          const storedCountries = getLocalStorage(
+            LOCAL_STORAGE_KEY_COUNTRIES,
+            true
+          );
+          if (storedCountries && storedCountries.length > 0) {
             setStoredCountries(storedCountries);
           }
 
