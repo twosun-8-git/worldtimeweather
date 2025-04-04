@@ -34,11 +34,13 @@ export const setLocalStorageArray = (
 };
 
 export const getLocalStorage = (key: string, isArray = false) => {
-  if (typeof window === "undefined") return null;
+  const emptyReturn = isArray ? [] : null;
+
+  if (typeof window === "undefined") return emptyReturn;
 
   try {
     const storedData = localStorage.getItem(key);
-    if (!storedData) return null;
+    if (!storedData) return emptyReturn;
 
     const parsedData = JSON.parse(storedData);
 
@@ -49,7 +51,7 @@ export const getLocalStorage = (key: string, isArray = false) => {
     }
   } catch (error) {
     console.error("Failed to get local storage:", error);
-    return null;
+    return emptyReturn;
   }
 };
 
