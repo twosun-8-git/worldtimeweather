@@ -14,7 +14,7 @@ export function CardList() {
 
   const storedCountries = useAtomValue(storedCountriesAtom);
 
-  if (storedCountries.length < 1) {
+  if (!storedCountries || storedCountries.length < 1) {
     return;
   }
 
