@@ -30,7 +30,7 @@ export function ListItemButton({ code }: Props) {
     );
 
   return (
-    <div className="flex pl-7 pt-2 md:pl-0 md:pt-1 md:ml-auto ">
+    <div className="flex">
       <RenderButton />
     </div>
   );
