@@ -30,7 +30,7 @@ export function ListItemButton({ code }: Props) {
     );
 
   return (
-    <div className="flex w-20 ml-4 justify-start">
+    <div className="flex w-20 justify-start md:ml-4">
       <RenderButton />
     </div>
   );
