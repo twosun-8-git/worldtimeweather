@@ -1,12 +1,9 @@
-"use client";
-
-import { useState } from "react";
-
 import { cn } from "@/utils";
 import {
   CircleImage,
   MediumTimer,
-  CancelButton,
+  RemoveButton,
+  ToggleButton,
 } from "@/app/_components/shared";
 
 type Props = {
@@ -24,23 +21,17 @@ export function CardItem({
   onClickCancel,
   timezone,
 }: Props) {
-  const [visibleCancelButton, setVisibleCancelButton] = useState(false);
-
   const style =
     "flex flex-col text-gray-500 text-sm whitespace-nowrap sm:flex-row";
 
   const mblgStyle = "mb-lg:text-xs";
 
-  const smStyle = "sm:text-sm";
+  const smStyle = "sm:text-sm sm:truncate";
 
   return (
-    <div
-      className="relative flex-none w-full border border-gray-100 p-2 pr-7 text-left rounded-lg mb-lg:w-[calc((100%-8px)/2)] mb-lg:p-2.5 sm:w-[240px] sm:h-[108px] sm:pr-2"
-      onMouseOver={() => setVisibleCancelButton(true)}
-      onMouseLeave={() => setVisibleCancelButton(false)}
-    >
-      <button
-        className="contents w-full sm:h-full sm:flex sm:flex-col sm:justify-center"
+    <div className="flex-none w-full border border-gray-100 p-2 text-left rounded-lg mb-lg:w-[calc((100%-8px)/2)] mb-lg:p-2.5 sm:w-[240px]">
+      <div
+        className="contents w-full sm:flex sm:flex-col sm:justify-center"
         onClick={onClickCard}
       >
         <figure className="flex items-start gap-x-1 sm:items-center sm:gap-x-2">
@@ -51,23 +42,18 @@ export function CardItem({
           />
           <figcaption className={cn(style, mblgStyle, smStyle)}>
             <span>{country}</span>
+            <span className="hidden sm:inline">&nbsp;-&nbsp;</span>
+            <span>{timezone}</span>
           </figcaption>
         </figure>
         <div className="py-1 pl-5 text-left sm:pt-1 sm:pl-8 md:pt-0">
           <MediumTimer className="text-4xl" timezone={timezone} />
         </div>
-        <div className="flex gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
-          <p>Selectボタンを表示する</p>
+        <div className="flex justify-between gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
+          <ToggleButton code={code} />
+          <RemoveButton onClick={onClickCancel} />
         </div>
-      </button>
-      <CancelButton
-        className={cn(
-          `flex items-center justify-center w-[18px] h-[18px] bg-red rounded-full absolute top-2 right-2 sm:w-5 sm:h-5 sm:-top-2 sm:-right-2 transition-opacity duration-140 ease-in-out ${
-            visibleCancelButton ? "opacity-100" : "opacity-0"
-          }`
-        )}
-        onClick={onClickCancel}
-      />
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ type Props = {
 
 export function CircleImage({ className, src, alt }: Props) {
   const baseStyle =
-    "block relative w-6 aspect-square rounded-full border border-gray-100 overflow-hidden";
+    "block relative w-6 shrink-0 aspect-square rounded-full border border-gray-100 overflow-hidden";
 
   return (
     <div className={cn(baseStyle, className)}>

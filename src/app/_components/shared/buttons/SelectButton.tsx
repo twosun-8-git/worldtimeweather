@@ -7,7 +7,7 @@ type Props = {
 
 export function SelectButton({ className, onClick }: Props) {
   const baseStyle =
-    "flex h-7 items-center justify-center border border-blue gap-x-1 rounded py-2 px-2.5 text-white leading-none cursor-pointer";
+    "flex h-7 items-center justify-center border border-blue gap-x-1 rounded py-2 px-2.5 leading-none cursor-pointer";
 
   return (
     <button
