@@ -1,4 +1,3 @@
-// src/app/_hooks/useTime.ts の修正版
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
@@ -17,6 +16,7 @@ type Options = {
   updateInterval?: number;
   timeFormat?: string;
   dateFormat?: string;
+  alignToMinute?: boolean;
 };
 
 export function useTime(options: Options = {}) {
@@ -26,6 +26,8 @@ export function useTime(options: Options = {}) {
   const updateInterval = options.updateInterval || 1000;
   const timeFormat = options.timeFormat || "HH:mm:ss";
   const dateFormat = options.dateFormat || "MMM D";
+  const alignToMinute =
+    options.alignToMinute !== undefined ? options.alignToMinute : true;
 
   const [timeDigits, setTimeDigits] = useState<string[]>([]);
   const [dateTimeISO, setDateTimeISO] = useState("");
@@ -55,9 +57,26 @@ export function useTime(options: Options = {}) {
   useEffect(() => {
     updateTime();
 
-    const intervalId = setInterval(updateTime, updateInterval);
-    return () => clearInterval(intervalId);
-  }, [updateTime, updateInterval]);
+    let intervalId: NodeJS.Timeout;
+
+    if (alignToMinute) {
+      const now = new Date();
+      const delay = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+      const timeoutId = setTimeout(() => {
+        updateTime();
+        intervalId = setInterval(updateTime, updateInterval);
+      }, delay);
+
+      return () => {
+        clearTimeout(timeoutId);
+        clearInterval(intervalId);
+      };
+    } else {
+      intervalId = setInterval(updateTime, updateInterval);
+      return () => clearInterval(intervalId);
+    }
+  }, [updateTime, updateInterval, alignToMinute]);
 
   return {
     timeDigits,

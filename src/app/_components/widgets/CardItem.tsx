@@ -14,9 +14,16 @@ type Props = {
   code: string;
   onClickCard: () => void;
   onClickCancel: () => void;
+  timezone: string;
 };
 
-export function CardItem({ country, code, onClickCard, onClickCancel }: Props) {
+export function CardItem({
+  country,
+  code,
+  onClickCard,
+  onClickCancel,
+  timezone,
+}: Props) {
   const [visibleCancelButton, setVisibleCancelButton] = useState(false);
 
   const style =
@@ -47,7 +54,7 @@ export function CardItem({ country, code, onClickCard, onClickCancel }: Props) {
           </figcaption>
         </figure>
         <div className="py-1 pl-5 text-left sm:pt-1 sm:pl-8 md:pt-0">
-          <MediumTimer className="sm:text-3xl md:text-4xl" />
+          <MediumTimer className="text-4xl" timezone={timezone} />
         </div>
         <div className="flex gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
           <p>Selectボタンを表示する</p>
