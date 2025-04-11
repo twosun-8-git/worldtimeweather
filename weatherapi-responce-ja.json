@@ -1,0 +1,341 @@
+[
+  {
+    "lucide": "sun, cloud-sun, cloud, cloudy, cloud-hail, cloud-snow, cloud-drizzle, cloud-rain, cloud-rain-wind, cloud-lightning"
+  },
+  {
+    "code": 1000,
+    "day": "晴れ",
+    "night": "晴天",
+    "icon": 113,
+    "lucide": "sun"
+  },
+  {
+    "code": 1003,
+    "day": "晴れ時々曇り",
+    "night": "晴れ時々曇り",
+    "icon": 116,
+    "lucide": "cloud-sun"
+  },
+  {
+    "code": 1006,
+    "day": "曇り",
+    "night": "曇り",
+    "icon": 119,
+    "lucide": "cloud"
+  },
+  {
+    "code": 1009,
+    "day": "本曇り",
+    "night": "本曇り",
+    "icon": 122,
+    "lucide": "cloudy"
+  },
+  {
+    "code": 1030,
+    "day": "霧",
+    "night": "霧",
+    "icon": 143,
+    "lucide": "cloud-fog"
+  },
+  {
+    "code": 1063,
+    "day": "所により雨の可能性",
+    "night": "所により雨の可能性",
+    "icon": 176,
+    "lucide": "cloud-drizzle"
+  },
+  {
+    "code": 1066,
+    "day": "所により雪の可能性",
+    "night": "所により雪の可能性",
+    "icon": 179,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1069,
+    "day": "所によりみぞれの可能性",
+    "night": "所によりみぞれの可能性",
+    "icon": 182,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1072,
+    "day": "所により凍結霧雨の可能性",
+    "night": "所により凍結霧雨の可能性",
+    "icon": 185,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1087,
+    "day": "雷雨の可能性",
+    "night": "雷雨の可能性",
+    "icon": 200,
+    "lucide": "cloud-lightning"
+  },
+  {
+    "code": 1114,
+    "day": "地吹雪",
+    "night": "地吹雪",
+    "icon": 227,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1117,
+    "day": "猛吹雪",
+    "night": "猛吹雪",
+    "icon": 230,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1135,
+    "day": "霧",
+    "night": "霧",
+    "icon": 248,
+    "lucide": "cloud-fog"
+  },
+  {
+    "code": 1147,
+    "day": "凍結霧",
+    "night": "凍結霧",
+    "icon": 260,
+    "lucide": "cloud-fog"
+  },
+  {
+    "code": 1150,
+    "day": "所により軽い霧雨",
+    "night": "所により軽い霧雨",
+    "icon": 263,
+    "lucide": "cloud-drizzle"
+  },
+  {
+    "code": 1153,
+    "day": "軽い霧雨",
+    "night": "軽い霧雨",
+    "icon": 266,
+    "lucide": "cloud-drizzle"
+  },
+  {
+    "code": 1168,
+    "day": "凍結霧雨",
+    "night": "凍結霧雨",
+    "icon": 281,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1171,
+    "day": "強い凍結霧雨",
+    "night": "強い凍結霧雨",
+    "icon": 284,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1180,
+    "day": "所により小雨",
+    "night": "所により小雨",
+    "icon": 293,
+    "lucide": "cloud-drizzle"
+  },
+  {
+    "code": 1183,
+    "day": "小雨",
+    "night": "小雨",
+    "icon": 296,
+    "lucide": "cloud-drizzle"
+  },
+  {
+    "code": 1186,
+    "day": "時々中程度の雨",
+    "night": "時々中程度の雨",
+    "icon": 299,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1189,
+    "day": "中程度の雨",
+    "night": "中程度の雨",
+    "icon": 302,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1192,
+    "day": "時々強い雨",
+    "night": "時々強い雨",
+    "icon": 305,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1195,
+    "day": "大雨",
+    "night": "大雨",
+    "icon": 308,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1198,
+    "day": "軽い凍結雨",
+    "night": "軽い凍結雨",
+    "icon": 311,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1201,
+    "day": "中程度または強い凍結雨",
+    "night": "中程度または強い凍結雨",
+    "icon": 314,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1204,
+    "day": "軽いみぞれ",
+    "night": "軽いみぞれ",
+    "icon": 317,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1207,
+    "day": "中程度または強いみぞれ",
+    "night": "中程度または強いみぞれ",
+    "icon": 320,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1210,
+    "day": "所により小雪",
+    "night": "所により小雪",
+    "icon": 323,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1213,
+    "day": "小雪",
+    "night": "小雪",
+    "icon": 326,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1216,
+    "day": "所により中程度の雪",
+    "night": "所により中程度の雪",
+    "icon": 329,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1219,
+    "day": "中程度の雪",
+    "night": "中程度の雪",
+    "icon": 332,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1222,
+    "day": "所により大雪",
+    "night": "所により大雪",
+    "icon": 335,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1225,
+    "day": "大雪",
+    "night": "大雪",
+    "icon": 338,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1237,
+    "day": "氷粒",
+    "night": "氷粒",
+    "icon": 350,
+    "lucide": "snowflake"
+  },
+  {
+    "code": 1240,
+    "day": "弱いにわか雨",
+    "night": "弱いにわか雨",
+    "icon": 353,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1243,
+    "day": "中程度または強いにわか雨",
+    "night": "中程度または強いにわか雨",
+    "icon": 356,
+    "lucide": "cloud-rain"
+  },
+  {
+    "code": 1246,
+    "day": "豪雨",
+    "night": "豪雨",
+    "icon": 359,
+    "lucide": "cloud-rain-wind"
+  },
+  {
+    "code": 1249,
+    "day": "軽いみぞれの急な降り",
+    "night": "軽いみぞれの急な降り",
+    "icon": 362,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1252,
+    "day": "中程度または強いみぞれの急な降り",
+    "night": "中程度または強いみぞれの急な降り",
+    "icon": 365,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1255,
+    "day": "軽いにわか雪",
+    "night": "軽いにわか雪",
+    "icon": 368,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1258,
+    "day": "中程度または強いにわか雪",
+    "night": "中程度または強いにわか雪",
+    "icon": 371,
+    "lucide": "cloud-snow"
+  },
+  {
+    "code": 1261,
+    "day": "氷粒の軽いにわか降り",
+    "night": "氷粒の軽いにわか降り",
+    "icon": 374,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1264,
+    "day": "氷粒の中程度または強いにわか降り",
+    "night": "氷粒の中程度または強いにわか降り",
+    "icon": 377,
+    "lucide": "cloud-hail"
+  },
+  {
+    "code": 1273,
+    "day": "所により雷を伴う小雨",
+    "night": "所により雷を伴う小雨",
+    "icon": 386,
+    "lucide": "cloud-lightning"
+  },
+  {
+    "code": 1276,
+    "day": "雷を伴う中程度または強い雨",
+    "night": "雷を伴う中程度または強い雨",
+    "icon": 389,
+    "lucide": "cloud-lightning"
+  },
+  {
+    "code": 1279,
+    "day": "所により雷を伴う小雪",
+    "night": "所により雷を伴う小雪",
+    "icon": 392,
+    "lucide": "cloud-lightning"
+  },
+  {
+    "code": 1282,
+    "day": "雷を伴う中程度または強い雪",
+    "night": "雷を伴う中程度または強い雪",
+    "icon": 395,
+    "lucide": "cloud-lightning"
+  }
+]

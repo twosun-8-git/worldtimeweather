@@ -19,7 +19,11 @@ export type ActiveWeather = {
   timezone: string;
   temp_c: number;
   temp_f: number;
-  condition: string;
+  condition: {
+    text: string;
+    icon: string;
+    code: number;
+  };
   updated: string;
 };
 

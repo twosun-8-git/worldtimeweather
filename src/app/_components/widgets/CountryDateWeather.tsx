@@ -63,8 +63,8 @@ export function CountryDateWeather({ timezone }: Props) {
       </div>
 
       <div className="flex items-center gap-x-1">
-        <WeatherIcon type="rain" size={16} />
-        <time dateTime="2025-01-25">{condition}</time>
+        <WeatherIcon code={condition.code} size={16} />
+        <span>{condition.text}</span>
       </div>
       <div className="flex items-center gap-x-1">
         <TempIcon size={16} />
