@@ -4,6 +4,8 @@ import { useRef, useEffect, useState, useCallback } from "react";
 
 import countriesData from "@/data/countries.json";
 import { BREAKPOINTS } from "@/consts";
+
+import { useActiveCountry, useStoredCountries } from "@/app/_hooks";
 import { ListItem } from "@/app/_components/widgets";
 
 type Props = {
@@ -26,6 +28,15 @@ export function List({ keyword }: Props) {
       (country.code3 && country.code3.toLowerCase().includes(lowerKeyword))
     );
   });
+
+  const { saveCountry } = useStoredCountries();
+
+  const { setActiveCountryByCode } = useActiveCountry();
+
+  const handleSave = (code: string) => {
+    saveCountry(code);
+    setActiveCountryByCode(code);
+  };
 
   const updateMaxHeight = useCallback(() => {
     if (itemRef.current && filteredCountries.length > 0) {
@@ -67,6 +78,7 @@ export function List({ keyword }: Props) {
           country={country.name}
           code={country.code2 || ""}
           timezone={country.timezone}
+          onClick={() => handleSave(country.code2 || "")}
         />
       ))}
     </ul>

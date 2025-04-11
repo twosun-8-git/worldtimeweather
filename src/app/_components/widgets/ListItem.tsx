@@ -8,10 +8,11 @@ type Props = {
   country: string;
   code: string;
   timezone: string;
+  onClick: () => void;
 };
 
 export const ListItem = forwardRef<HTMLLIElement, Props>(
-  ({ country, code, timezone }: Props, ref) => {
+  ({ country, code, timezone, onClick }: Props, ref) => {
     return (
       <li
         ref={ref}
@@ -34,6 +35,7 @@ export const ListItem = forwardRef<HTMLLIElement, Props>(
           <ToggleButton
             code={code}
             className="flex w-20 justify-start md:ml-4"
+            onClick={onClick}
           />
         </div>
       </li>

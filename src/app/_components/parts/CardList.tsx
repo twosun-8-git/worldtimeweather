@@ -35,7 +35,7 @@ export function CardList() {
               country={country.name}
               code={country.code2}
               timezone={country.timezone}
-              onClickCard={() => setActiveCountryByCode(country.code2)}
+              onClickActive={() => setActiveCountryByCode(country.code2)}
               onClickCancel={() => removeCountry(country.code2)}
             />
           ))}

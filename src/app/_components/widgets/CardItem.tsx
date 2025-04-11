@@ -9,7 +9,7 @@ import {
 type Props = {
   country: string;
   code: string;
-  onClickCard: () => void;
+  onClickActive: () => void;
   onClickCancel: () => void;
   timezone: string;
 };
@@ -17,7 +17,7 @@ type Props = {
 export function CardItem({
   country,
   code,
-  onClickCard,
+  onClickActive,
   onClickCancel,
   timezone,
 }: Props) {
@@ -30,10 +30,7 @@ export function CardItem({
 
   return (
     <div className="flex-none w-full border border-gray-100 p-2 text-left rounded-lg mb-lg:w-[calc((100%-8px)/2)] mb-lg:p-2.5 sm:w-[240px]">
-      <div
-        className="contents w-full sm:flex sm:flex-col sm:justify-center"
-        onClick={onClickCard}
-      >
+      <div className="contents w-full sm:flex sm:flex-col sm:justify-center">
         <figure className="flex items-start gap-x-1 sm:items-center sm:gap-x-2">
           <CircleImage
             src={`/assets/flags/${code}.png`}
@@ -50,7 +47,7 @@ export function CardItem({
           <MediumTimer className="text-4xl" timezone={timezone} />
         </div>
         <div className="flex justify-between gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
-          <ToggleButton code={code} />
+          <ToggleButton code={code} onClick={onClickActive} />
           <RemoveButton onClick={onClickCancel} />
         </div>
       </div>
