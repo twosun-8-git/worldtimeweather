@@ -12,7 +12,7 @@ export function CountryTimezone({ country, code, timezone }: Props) {
 
   const mdStyle = "md:text-sm sm:flex-row";
 
-  const image = code ? `${code}.png` : "alt-circle.png";
+  const image = code ? `${code.toLowerCase()}.png` : "alt-circle.png";
 
   return (
     <figure className="flex items-center gap-x-1.5">
