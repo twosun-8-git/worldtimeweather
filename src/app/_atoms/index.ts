@@ -20,7 +20,11 @@ export const activeWeatherAtom = atom<ActiveWeather>({
   timezone: "",
   temp_c: 0,
   temp_f: 0,
-  condition: "",
+  condition: {
+    text: "",
+    icon: "",
+    code: 0,
+  },
   updated: "",
 });
 
