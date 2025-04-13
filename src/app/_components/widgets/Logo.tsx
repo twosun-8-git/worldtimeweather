@@ -1,13 +1,9 @@
-import { LogoType } from "@/app/_components/shared";
+import { LogoMark } from "@/app/_components/shared";
 
-type Props = {
-  title: string;
-};
-
-export function Logo({ title }: Props) {
+export function Logo() {
   return (
     <h1>
-      <LogoType title={title} />
+      <LogoMark />
     </h1>
   );
 }
