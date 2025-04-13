@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const apiKey = process.env.WEATHER_API_KEY;
 
     if (!apiKey) {
-      console.error("WEATHER_API_KEY is not defined in environment variables");
+      console.error("WEATHER_API_KEY is not defined.");
       return NextResponse.json(
         {
           message: "Server configuration error",
@@ -26,7 +26,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const cityName = timezone.split("/").pop();
+    const apiUrl = `https://api.weatherapi.com/v1/current.json`;
+    const countryName = timezone.split("/")[0];
+    const cityName = timezone.split("/")[1];
 
     if (!cityName) {
       return NextResponse.json(
@@ -37,17 +39,23 @@ export async function POST(request: Request) {
       );
     }
 
-    const response = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=no`
-    );
+    const cityResponse = await fetch(`${apiUrl}?key=${apiKey}&q=${cityName}`);
 
-    if (!response.ok) {
-      throw new Error(
-        `weatherapi.com responded with status: ${response.status}`
+    let data;
+    if (!cityResponse.ok) {
+      const countryResponse = await fetch(
+        `${apiUrl}?key=${apiKey}&q=${countryName}`
       );
-    }
 
-    const data = await response.json();
+      if (!countryResponse.ok) {
+        throw new Error(
+          `weatherapi.com responded with status: ${countryResponse.status}`
+        );
+      }
+      data = await countryResponse.json();
+    } else {
+      data = await cityResponse.json();
+    }
 
     return NextResponse.json({
       name: data.location.name,

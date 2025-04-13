@@ -9,7 +9,6 @@ export async function GET(request: Request) {
   const forwardedFor = request.headers.get("x-forwarded-for");
   const ip = forwardedFor ? forwardedFor.split(",")[0] : "unknown";
 
-  // 開発環境の場合はモックデータを返す
   if (ip === "127.0.0.1" || ip === "::1" || ip === "unknown") {
     return NextResponse.json({
       ip: "開発環境",
@@ -41,9 +40,9 @@ export async function GET(request: Request) {
     // エラー時はデフォルト値を返す
     return NextResponse.json({
       ip,
-      country: "Unknown",
-      countryCode: "XX",
-      timezone: "UTC",
+      country: "United States of America",
+      countryCode: "us",
+      timezone: "America/New_York",
     });
   }
 }
