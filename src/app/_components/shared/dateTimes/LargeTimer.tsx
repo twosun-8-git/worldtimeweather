@@ -11,6 +11,7 @@ export function LargeTimer() {
 
   const { timeDigits, dateTimeISO } = useTime({
     timezone: activeCountry.timezone,
+    alignToMinute: false,
   });
 
   const digits =
