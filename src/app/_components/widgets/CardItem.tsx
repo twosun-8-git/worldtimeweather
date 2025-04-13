@@ -22,7 +22,7 @@ export function CardItem({
   timezone,
 }: Props) {
   const style =
-    "flex flex-col text-gray-500 text-sm whitespace-nowrap sm:flex-row";
+    "flex flex-col text-gray-700 text-sm whitespace-nowrap sm:flex-row";
 
   const mblgStyle = "mb-lg:text-xs";
 
@@ -44,7 +44,7 @@ export function CardItem({
           </figcaption>
         </figure>
         <div className="py-1 pl-5 text-left sm:pt-1 sm:pl-8 md:pt-0">
-          <MediumTimer className="text-4xl" timezone={timezone} />
+          <MediumTimer className="text-4xl text-gray-500" timezone={timezone} />
         </div>
         <div className="flex justify-between gap-x-1 text-gray-500 text-xs pl-5 whitespace-nowrap sm:pt-1 md:pt-0 sm:gap-x-2 sm:pl-8">
           <ToggleButton code={code} onClick={onClickActive} />

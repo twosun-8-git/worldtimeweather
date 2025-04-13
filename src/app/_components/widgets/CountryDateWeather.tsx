@@ -49,14 +49,12 @@ export function CountryDateWeather({ timezone }: Props) {
 
   const mdStyle = "md:text-sm md:border-none md:p-0 md:flex-row md:gap-x-2";
 
-  const containerStyle = "pc:gap-x-4";
-
   if (!activeWeather) return null;
 
   const { condition, temp_c, temp_f } = activeWeather;
 
   return (
-    <div className={cn(style, mdStyle, containerStyle)}>
+    <div className={cn(style, mdStyle)}>
       <div className="flex items-center gap-x-1">
         <CalendarIcon size={16} />
         <CountryDate timezone={timezone} />
@@ -66,8 +64,8 @@ export function CountryDateWeather({ timezone }: Props) {
         <WeatherIcon code={condition.code} size={16} />
         <span>{condition.text}</span>
       </div>
-      <div className="flex items-center gap-x-1">
-        <TempIcon size={16} />
+      <div className="flex items-center">
+        <TempIcon size={15.6} />
         <span>
           {temp_c}°C / {temp_f}°F
         </span>
