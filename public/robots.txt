@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://worldtimeweather.com
+
+# Sitemaps
+Sitemap: https://worldtimeweather.com/sitemap.xml
