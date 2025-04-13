@@ -7,7 +7,8 @@ type Props = {
 };
 
 export function RemoveButton({ className, onClick }: Props) {
-  const baseStyle = "flex w-auto h-7 items-center justify-center";
+  const baseStyle =
+    "flex w-auto h-7 items-center justify-center text-gray-200 hover:text-red";
 
   return (
     <button
@@ -15,7 +16,7 @@ export function RemoveButton({ className, onClick }: Props) {
       className={cn(baseStyle, className)}
       onClick={onClick}
     >
-      <Trash2 size={14} color="#cbcedb" />
+      <Trash2 size={14} />
     </button>
   );
 }
