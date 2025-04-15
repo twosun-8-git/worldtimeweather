@@ -34,12 +34,6 @@ export default function RootLayout({
             gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
           `}
         </Script>
-        <Script
-          id="adsbygoogle-init"
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE_CLIENT_ID}`}
-          crossOrigin="anonymous"
-        />
       </body>
     </html>
   );
