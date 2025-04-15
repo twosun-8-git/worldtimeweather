@@ -35,10 +35,11 @@ export default function RootLayout({
           `}
         </Script>
         <Script
-          async
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE_CLIENT_ID}`}
           crossOrigin="anonymous"
-        ></Script>
+        />
       </body>
     </html>
   );
